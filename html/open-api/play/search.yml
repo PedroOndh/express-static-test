@@ -1,0 +1,365 @@
+openapi: 3.0.3
+info:
+  title: Search documentation
+  description: Endpoints to make requests to the Search Service. These endpoints will be used by the Playboard to avoid direct communication with the said service.
+
+  contact:
+    email: play@empathy.co
+  version: '1.0.0'
+servers:
+  - url: 'http://localhost:8080'
+    description: local
+  - url: 'https://play-api.kroger.internal.dataless.gcp.empathy.dev/'
+    description: kroger dataless
+  - url: 'https://play-api.carrefour.internal.dataless.gcp.empathy.dev/'
+    description: carrefour dataless
+tags:
+  - name: search
+    description: Manage search request
+paths:
+  '/{instanceId}/search/api/query':
+    post:
+      tags:
+        - search
+      summary: Returns a result list corresponding to the explicit query and the rest of the request's body properties.
+      operationId: searchrequest
+      parameters:
+        - name: instanceId
+          in: path
+          description: Identifier of the instance.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '500':
+          description: Internal Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalError'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/{instanceId}/browse/api/query':
+    post:
+      tags:
+        - browse
+      summary: Returns a result list corresponding to the explicit browse query and the rest of the request's body properties.
+      operationId: browserequest
+      parameters:
+        - name: instanceId
+          in: path
+          description: Identifier of the instance.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BrowseRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '500':
+          description: Internal Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalError'
+      security:
+        - AUTHORIZATION:
+            - global
+components:
+  schemas:
+    SearchRequestBody:
+      title: Search request body
+      required:
+        - query
+        - lang
+      type: object
+      properties:
+        query:
+          description: Query to be executed in the search service
+          type: string
+        lang:
+          description: Language used in the query
+          type: string
+        start:
+          description: Number of items to skip
+          type: integer
+        rows:
+          description: Number of items to be returned
+          type: integer
+        debugEnabled:
+          description: Sets up whether a complete debug objects will be returned in the response
+          type: boolean
+        debugRankingDetails:
+          description: Activates the debug mode for ranking details
+          type: boolean
+        equalize:
+          description: A string that contains a JSON equalize object
+          type: string
+        productsRankingField:
+          description: The name of the field for product rankings.
+          type: string
+        productsRankingBoostIds:
+          description: A list of boosted product identifiers separated by commas
+          type: string
+        productRankingBuriesIds:
+          description: A list of buried product identifiers separated by commas
+          type: string
+        attributesRankingBoost:
+          description: A list of boosted attributes separated by commas
+          type: string
+        attributesRankingsBuries:
+          description: A list of buried attributes separated by commas
+          type: string
+        facet:
+          description: A list of facet identifiers separated by commas.
+          type: array
+          items:
+            type: string
+        catalog:
+          description: Catalog's identifier
+          type: string
+        store:
+          description: Store's identifier
+          type: string
+    BrowseRequestBody:
+      title: Browse request body
+      required:
+        - browseField
+        - browseValue
+        - lang
+      type: object
+      properties:
+        lang:
+          description: Language used in the query
+          type: string
+        start:
+          description: Number of items to skip
+          type: integer
+        rows:
+          description: Number of items to be returned
+          type: integer
+        debugEnabled:
+          description: Sets up whether a complete debug objects will be returned in the response
+          type: boolean
+        debugRankingDetails:
+          description: Activates the debug mode for ranking details
+          type: boolean
+        equalize:
+          description: A string that contains a JSON equalize object
+          type: string
+        productsRankingField:
+          description: The name of the field for product rankings.
+          type: string
+        productsRankingBoostIds:
+          description: A list of boosted product identifiers separated by commas
+          type: string
+        productRankingBuriesIds:
+          description: A list of buried product identifiers separated by commas
+          type: string
+        attributesRankingBoost:
+          description: A list of boosted attributes separated by commas
+          type: string
+        attributesRankingsBuries:
+          description: A list of buried attributes separated by commas
+          type: string
+        facet:
+          description: A list of facet identifiers separated by commas.
+          type: array
+          items:
+            type: string
+        catalog:
+          description: Catalog's identifier
+          type: string
+        store:
+          description: Store's identifier
+          type: string
+        browseField:
+          description: Name of the browse field.
+          type: string
+        browseValue:
+          description: Value for the browse field.
+          type: string
+
+    Response:
+      title: Response
+      type: object
+      properties:
+        result:
+          description: collection of the resulting products.
+          type: array
+          items:
+            properties:
+              id:
+                description: product's identifier.
+                type: string
+              name:
+                description: product's description or name.
+                type: string
+              url:
+                description: product's URL.
+                type: string
+              image_url:
+                description: product's image URL.
+                type: string
+              debugProperties:
+                description: object with debug information.
+                type: object
+        facets:
+          description: collection of the resulting facets.
+          type: array
+          items:
+            properties:
+              id:
+                description: facet's identifier.
+                type: string
+              name:
+                description: facet's description or name.
+                type: string
+              values:
+                description: facet's values.
+                type: array
+                items:
+                  properties:
+                    id:
+                      description: facet value's identifer.
+                      type: string
+                    name:
+                      description: facet value's description or name.
+                      type: string
+                    results_count:
+                      description: number of products related to this facet.
+                      type: string
+                    filter:
+                      description: filter to be applied.
+                      type: string
+        num_found:
+          description: number of resulting products.
+          type: integer
+
+    BadRequest:
+      title: BadRequest
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+          description: Datetime of the request.
+        status:
+          type: integer
+          example: 400
+          description: HTTP status code of the request.
+        error:
+          type: string
+          example: "Bad Request"
+          description: HTTP status identifier.
+        message:
+          type: string
+          example: ""
+          description: Explanation about the bad request.
+        path:
+          type: string
+          example: "/default/search/api/query"
+          description: Used endpoint path.
+
+    InternalError:
+      title: Internal Error
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+          description: Datetime of the request.
+        status:
+          type: integer
+          example: 500
+          description: HTTP status code of the request.
+        error:
+          type: string
+          example: INTERNAL_SERVER_ERROR
+          description: HTTP status identifier
+        details:
+          type: object
+          description: Specific details of the error.
+          properties:
+            id:
+              type: string
+              example: INTERNAL_ERROR
+              description: Error identifier.
+            message:
+              type: string
+              example: "Mandatory attribute not found: browseField"
+              description: Description of the error.
+    Unauthorized:
+      title: Unauthorized
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+        status:
+          type: integer
+          example: 401
+        error:
+          type: string
+          example: UNAUTHORIZED
+        details:
+          type: object
+          properties:
+            id:
+              type: string
+              example: UNAUTHORIZED
+            message:
+              type: string
+              example: Full authentication is required to access this resource
+  securitySchemes:
+    AUTHORIZATION:
+      type: apiKey
+      name: AUTHORIZATION
+      in: header
+

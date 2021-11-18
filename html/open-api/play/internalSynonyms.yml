@@ -1,0 +1,137 @@
+openapi: 3.0.3
+info:
+  title: Internal Synonyms Documentation
+  description: This endpoint is internal and does not require authentication. Its purpose is to provide the existing list of synonyms. The synonyms can not be modified through this endpoint.
+  contact:
+    email: play@empathy.co
+  version: '1.0.0'
+servers:
+  - url: 'http://localhost:8080'
+    description: local
+  - url: 'https://play-api.kroger.internal.dataless.gcp.empathy.dev/'
+    description: kroger dataless
+  - url: 'https://play-api.carrefour.internal.dataless.gcp.empathy.dev/'
+    description: carrefour dataless
+paths:
+  /internal/synonyms:
+    get:
+      tags:
+        - Synonyms
+      summary: Returns all the synonyms for the default instance.
+      operationId: getAll
+      parameters:
+        - name: lang
+          in: query
+          description: Language to filter.
+          style: form
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter results by the status (if it is active or not).
+          style: form
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultListSynonym'
+  '/internal/{requestInstanceId}/synonyms':
+    get:
+      tags:
+        - Synonyms
+      summary: Returns all the synonyms for the given instance.
+      operationId: getAllByRequestInstanceId
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: Identifier of the instance.
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: lang
+          in: query
+          description: Language to filter.
+          style: form
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter results by the status (if it is active or not).
+          style: form
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultListSynonym'
+components:
+  schemas:
+    ResultListSynonym:
+      title: List of synonym results
+      type: object
+      properties:
+        num_found:
+          type: integer
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Synonym'
+    Synonym:
+      title: Synonym
+      required:
+        - enabled
+        - context
+        - synonyms
+      type: object
+      properties:
+        id:
+          description: Synonym identifier.
+          type: string
+        metadata:
+          type: object
+          properties:
+            created_on:
+              description: When was created.
+              type: string
+              example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+            updated_on:
+              description: When was update.
+              type: string
+              example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+            user:
+              description: User who created or modified the synonyms.
+              type: string
+              example: string
+        context:
+          required:
+            - lang
+            - type
+          type: object
+          properties:
+            lang:
+              description: Synonym language.
+              type: string
+            type:
+              type: string
+              description: Synonym type.
+        enabled:
+          description: Status of a synonym (if it is active or not).
+          type: boolean
+        hyponyms:
+          type: array
+          description: List of words whose meaning is embedded in the synonyms words. This field is not mandatory, but if there is only one synonym, then this field becomes mandatory.
+          items:
+            type: string
+        synonyms:
+          type: array
+          description: List of words that mean the same as synonyms words.
+          items:
+            type: string

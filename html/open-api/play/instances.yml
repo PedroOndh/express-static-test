@@ -1,0 +1,747 @@
+openapi: 3.0.3
+info:
+  title: Instance Documentation
+  description: Endpoint to manage playboard configuration for each customer.
+  contact:
+    email: play@empathy.co
+  version: '1.0.0'
+servers:
+  - url: 'http://localhost:8080'
+    description: local
+  - url: 'https://play-api.kroger.internal.dataless.gcp.empathy.dev/'
+    description: kroger dataless
+  - url: 'https://play-api.carrefour.internal.dataless.gcp.empathy.dev/'
+    description: carrefour dataless
+tags:
+  - name: instances
+    description: Manage Client instances
+paths:
+  /instances:
+    get:
+      tags:
+        - instances
+      summary: Retrieve all instances.
+      operationId: getAllInstances
+      parameters:
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          required: false
+          schema:
+            type: integer
+        - name: start
+          in: query
+          description: Number of items to skip before starting to collect the result.
+          required: false
+          schema:
+            type: integer
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendant or descendant.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by specific field.
+          style: form
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter by enabled/disabled state.
+          required: false
+          schema:
+            type: boolean
+        - name: instance_id
+          in: query
+          description: Id of the instance.
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultList_Instance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+      security:
+        - AUTHORIZATION:
+            - global
+    post:
+      tags:
+        - instances
+      summary: Create a new instance.
+      operationId: createInstance
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Instance'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Instance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+      security:
+        - AUTHORIZATION:
+            - global
+  /instances/{id}:
+    get:
+      tags:
+        - instances
+      summary: Retrieve an instance by id.
+      operationId: getInstanceById
+      parameters:
+        - name: id
+          in: path
+          description: Id of the instance
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Instance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+    put:
+      tags:
+        - instances
+      summary: Update an instance by id.
+      operationId: updateInstance
+      parameters:
+        - name: id
+          in: path
+          description: Id of the instance
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Instance'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Instance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+
+    delete:
+      tags:
+        - instances
+      summary: Delete an instance by id.
+      operationId: deleteInstance
+      parameters:
+        - name: id
+          in: path
+          description: Id of the instance
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Instance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+
+components:
+  schemas:
+    Instance:
+      title: Instance
+      required:
+        - enabled
+      type: object
+      properties:
+        id:
+          description: Generated unique id of the instance. For example, 5ee794cc7a25e50001739123
+          type: string
+        instance_id:
+          description: Readable unique id of the instance, normally is the pretty_name without symbols, spaces and in lowercase.
+          type: string
+        pretty_name:
+          description: Pretty instance name.
+          type: string
+        enabled:
+          description: Status of the instance.
+          type: boolean
+        logo_urls:
+          $ref: '#/components/schemas/LogoUrls'
+        permissions:
+          description: Instance permissions.
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              $ref: '#/components/schemas/PermissionConfig'
+        tools:
+          $ref: '#/components/schemas/Tools'
+        catalog:
+          $ref: '#/components/schemas/CatalogConfig'
+        filters:
+          description: List of available filters.
+          type: array
+          items:
+            oneOf:
+              - $ref: '#/components/schemas/RealtimeFilterConfig'
+              - $ref: '#/components/schemas/DateFilterConfig'
+              - $ref: '#/components/schemas/RegularFilterConfig'
+        kpis:
+          description: List of available KPI’s.
+          type: array
+          items:
+            type: string
+            enum:
+              - QUERY
+              - CLICKS
+              - FINDABILITY
+              - ADD2CART
+              - CHECKOUT
+              - USERS
+              - NO_RESULTS
+              - QUERIES_PER_SESSION
+        metadata:
+          $ref: '#/components/schemas/Metadata'
+        domains:
+          $ref: '#/components/schemas/Domains'
+
+    Domains:
+      title: Domains
+      description: Domains to obtain permissions.
+      type: object
+      properties:
+        search:
+          type: array
+          items:
+            $ref: '#/components/schemas/DomainsProperties'
+        browse:
+          type: array
+          items:
+            $ref: '#/components/schemas/DomainsProperties'
+    DomainsProperties:
+      title: Domains properties.
+      description: Properties of a domain.
+      type: object
+      properties:
+        id:
+          description: Id of the resource for which a permission is held.
+          type: string
+        level:
+          description: Permission type for this resource.
+          type: string
+          enum:
+            - READ
+            - WRITE
+            - NONE
+    ResultList_Instance:
+      title: ResultList«Instance»
+      type: object
+      properties:
+        num_found:
+          description: Total number of instances.
+          type: integer
+        results:
+          description: List of instances.
+          type: array
+          items:
+            $ref: '#/components/schemas/Instance'
+    LogoUrls:
+      title: LogoUrls
+      description: Object that collects the different logos available for the instance
+      type: object
+      properties:
+        imagotype:
+          description: URL of an icon image and brand name.
+          type: string
+          format: URL
+        isotype:
+          description: URL of an icon image.
+          type: string
+          format: URL
+    PermissionConfig:
+      title: PermissionConfig
+      required:
+        - id
+        - level
+      type: object
+      properties:
+        id:
+          description: Permission identifier.
+          type: string
+        level:
+          description: Permission mode.
+          type: string
+          enum:
+            - NONE
+            - PREVIEW
+            - READ
+            - WRITE
+    RegularFilterConfig:
+      title: RegularFilterConfig
+      required:
+        - id
+        - type
+        - values
+      type: object
+      properties:
+        id:
+          description: Id of the filter.
+          type: string
+        multiselect_disabled:
+          description: Set if the filter can be used in multiselect mode. True means it is disabled.
+          type: boolean
+        pretty_name:
+          description: Name of the filter to be displayed.
+          type: string
+        sort_values_disabled:
+          description: Field that specifies if the filter values are sorted.
+          type: boolean
+        tagging_id:
+          description: Id of the filter for tagging purposes.
+          type: string
+        tooling_id:
+          description: Id of the filter for tooling purposes.
+          type: string
+        type:
+          description: Type of filter. In this case it will be always 'regular'.
+          type: string
+          enum:
+            - regular
+        default_value_id:
+          description: Set a default value id. If not specified, the first defined value will be used as the default one.
+          type: string
+        values:
+          description: List of possible values for the filter
+          type: array
+          items:
+            $ref: '#/components/schemas/RegularFilterValueConfig'
+    RegularFilterValueConfig:
+      title: RegularFilterValueConfig
+      description: Definition of a filter value
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          type: string
+          description: Regular filter value identifier.
+        pretty_name:
+          type: string
+          description: Name of the filter value to be displayed.
+        tagging_id:
+          description: Id of the filter value for tagging purposes.
+          type: string
+    DateFilterConfig:
+      title: DateFilterConfig
+      required:
+        - id
+        - type
+      type: object
+      properties:
+        id:
+          description: Id of the filter.
+          type: string
+        max_date_in_millis:
+          description: Maximum date that can be requested in milliseconds.
+          type: integer
+        max_period_in_millis:
+          description: Maximum period of time that can be requested in milliseconds.
+          type: integer
+        min_date_in_millis:
+          description: Minimum date that can be requested in milliseconds.
+          type: integer
+        pretty_name:
+          description: Name of the filter to be displayed.
+          type: string
+        type:
+          description: Type of filter. In this case it will be always 'date'.
+          type: string
+          enum:
+            - date
+    RealtimeFilterConfig:
+      title: RealtimeFilterConfig
+      required:
+        - id
+        - type
+      type: object
+      properties:
+        id:
+          description: Id of the filter
+          type: string
+        max_period_in_minutes:
+          description: Maximum value for the period that can be requested in minutes
+          type: integer
+        pretty_name:
+          description: Name of the filter to be displayed.
+          type: string
+        type:
+          description: Type of filter. In this case it will be always 'realtime'.
+          type: string
+          enum:
+            - realtime
+    SynonymTypeConfig:
+      title: SynonymTypeConfig
+      description: Configuration to define a synonym type.
+      type: object
+      properties:
+        id:
+          description: Identifier of the synonym type.
+          type: string
+        pretty_name:
+          description: Pretty name for the synonyme type.
+          type: string
+    Metadata:
+      title: Metadata
+      description: Data of the configuration itself.
+      type: object
+      properties:
+        created_on:
+          description: When was created.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+        updated_on:
+          description: When was updated the last time.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+        user:
+          description: Who was the last one that modified it.
+          type: string
+    Endpoints:
+      title: Endpoints
+      description: Stores configurations of other services.
+      type: object
+      properties:
+        search:
+          type: object
+          properties:
+            filters:
+              $ref: '#/components/schemas/EndpointProperties'
+        browse:
+          properties:
+            filters:
+              $ref: '#/components/schemas/EndpointProperties'
+        stats:
+          type: object
+          properties:
+            filters:
+              $ref: '#/components/schemas/EndpointProperties'
+    EndpointProperties:
+      title: Endpoint Properties
+      description: Stores the properties for a concrete endpoint.
+      type: object
+      properties:
+        filters:
+          description: Saves the configurations of each service.
+          type: object
+          properties:
+            id:
+              $ref: '#/components/schemas/EndpointPropertiesConfig'
+    EndpointPropertiesConfig:
+      title: Endpoint Properties Configuration
+      type: object
+      description: Configuration name.
+      properties:
+        type:
+          description: Stores the type of the configuration.
+          type: string
+          enum:
+            - ENUM
+            - TEXT
+        mandatory:
+          description: If the configuration is mandatory or not.
+          type: boolean
+        multivalue:
+          description: If the configuration can have more than one value.
+          type: boolean
+    ResultMappings:
+      title: ResultMappings
+      type: object
+      description: Object that is used to map playboard known fields with the customer specific search homologous fields.
+      properties:
+        id:
+          description: Name of the Field containing the product id.
+          type: string
+        image_url:
+          description: Name of the field that contains the URL of an image.
+          type: string
+        image_url_prefix:
+          description:  Fixed image url prefix. This is used when each product has a relative url for images. It is not needed if the product uses absolute urls for images.
+          type: string
+        name:
+          description: Name of the field that contains the product name.
+          type: string
+        url:
+          description: Name of the field that contains the URL of the product.
+          type: string
+        url_prefix:
+          description: Fixed url prefix. This is used when each product has a relative url. It is not needed if the product uses absolute urls.
+          type: string
+    CatalogField:
+      title: CatalogField
+      description: Definition of the catalog field behavior.
+      type: object
+      properties:
+        id:
+          description: Field identifier.
+          type: string
+        pretty_name:
+          description: Pretty name of the field used to be displayed.
+          type: string
+        facetable:
+          description: Identify the field as facetable.
+          type: boolean
+        rankable:
+          description: Identify the field as rankable.
+          type: boolean
+        searchable:
+          description: Identify the field as searchable.
+          type: boolean
+    CatalogConfig:
+      title: CatalogConfig
+      description: Configuration of the catalog.
+      type: object
+      required:
+        - result_mappings
+      properties:
+        index_token:
+          description: Id of the instance that is used to identify the customer in the index service.
+          type: string
+        fields:
+          description: Catalog fields configuration.
+          type: array
+          items:
+            $ref: '#/components/schemas/CatalogField'
+        result_mappings:
+          $ref: '#/components/schemas/ResultMappings'
+    Tools:
+      title: Tools
+      description: Specific configuration of each tool.
+      type: object
+      properties:
+        base:
+          $ref: '#/components/schemas/ToolConfig'
+        configuration:
+          $ref: '#/components/schemas/ConfigurationsToolConfig'
+        synonym:
+          $ref: '#/components/schemas/SynonymsToolConfig'
+    SynonymsToolConfig:
+      title: SynonymsToolConfig
+      description: Configuration for the synonyms tool
+      type: object
+      properties:
+        pivot_ids:
+          type: array
+          description: Values by which the catalog is segmented.
+          items:
+            type: string
+        types:
+          type: array
+          description: List of the different synonym types used in the customer catalog.
+          items:
+            $ref: '#/components/schemas/SynonymTypeConfig'
+    ToolConfig:
+      title: ToolConfig
+      description: Default configuration for all tools
+      type: object
+      properties:
+        pivot_ids:
+          type: array
+          description: Values by which the catalog is segmented.
+          items:
+            type: string
+    ConfigurationsToolConfig:
+      title: ConfigurationsToolConfig
+      description: Configuration for the "configurations" tool.
+      type: object
+      properties:
+        attributes:
+          type: array
+          description: List that can be used to identify groups of products.
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                description: Product identifier.
+              browse_id:
+                type: string
+                description: Browse identifier.
+              facet_id:
+                type: string
+                description: Facet identifier.
+              pretty_name:
+                type: string
+                description: Name of the product to be displayed
+        pivot_ids:
+          type: array
+          description: Values by which the catalog is segmented.
+          items:
+            type: string
+    Unauthorized:
+      title: Unauthorized
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 1599633810921
+        status:
+          type: integer
+          example: 401
+        error:
+          type: string
+          example: UNAUTHORIZED
+        details:
+          type: object
+          properties:
+            id:
+              type: string
+              example: UNAUTHORIZED
+            message:
+              type: string
+              example: Full authentication is required to access this resource
+    Forbidden:
+      title: Forbidden
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+        status:
+          type: string
+          example: 403
+        error:
+          type: string
+          example: FORBIDDEN
+        details:
+          type: object
+          properties:
+            id:
+              type: string
+              example: FORBIDDEN
+            message:
+              type: string
+              example: Invalid authorization
+    NotFound:
+      title: Not Found
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+        status:
+          type: string
+          example: 404
+        error:
+          type: string
+          example: NOT_FOUND
+        details:
+          type: object
+          properties:
+            id:
+              type: string
+              example: NOT_FOUND
+            message:
+              type: string
+              example: No instance found for id 123456789L
+  securitySchemes:
+    AUTHORIZATION:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

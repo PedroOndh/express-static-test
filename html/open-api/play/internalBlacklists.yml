@@ -1,0 +1,180 @@
+openapi: 3.0.3
+info:
+  title: Internal Blacklists Documentation
+  description: This endpoint is internal and does not require authentication. Its purpose is to provide blacklists items. The blacklists items can not be modified through this endpoint.
+  contact:
+    email: play@empathy.co
+  version: '1.0.0'
+servers:
+  - url: 'http://localhost:8080'
+    description: local
+  - url: 'https://play-api.kroger.internal.dataless.gcp.empathy.dev/'
+    description: kroger dataless
+  - url: 'https://play-api.carrefour.internal.dataless.gcp.empathy.dev/'
+    description: carrefour dataless
+
+paths:
+  /internal/blacklists:
+    get:
+      tags:
+        - Blacklists
+      summary: Returns blacklists items for the default instance.
+      operationId: getAll
+      parameters:
+        - name: enabled
+          in: query
+          description: Filter results by the status (if it is active or not).
+          style: form
+          schema:
+            type: boolean
+        - name: lang
+          in: query
+          description: Language to filter.
+          style: form
+          schema:
+            type: string
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          style: form
+          schema:
+            type: integer
+            default: 20
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendent.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by this field.
+          style: form
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultList_Blacklist'
+  /internal/{requestInstanceId}/blacklists:
+    get:
+      tags:
+        - Blacklists
+      summary: Returns blacklists items for the given instance.
+      operationId: getAllByRequestInstanceId
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: Identifier of the instance.
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter results by the status (if it is active or not).
+          style: form
+          schema:
+            type: boolean
+        - name: lang
+          in: query
+          description: Language to filter.
+          style: form
+          schema:
+            type: string
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          style: form
+          schema:
+            type: integer
+            default: 20
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendent.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by this field.
+          style: form
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultList_Blacklist'
+components:
+  schemas:
+    Blacklist:
+      title: Blacklist
+      required:
+        - enabled
+      type: object
+      description: blacklisted terms for a specific lang.
+      properties:
+        created_on:
+          description: When was created.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+        enabled:
+          description: Filter results by the status.
+          type: boolean
+        id:
+          type: string
+          description: Blacklist identifier.
+        lang:
+          type: string
+          description: Language for a blacklist.
+        terms:
+          uniqueItems: true
+          type: array
+          description: Words to be blacklisted.
+          items:
+            type: string
+        updated_on:
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+          description: When was updated.
+    ResultList_Blacklist:
+      title: ResultList<Blacklist>
+      description: List the results that contains a blacklist.
+      deprecated: true
+      type: object
+      properties:
+        num_found:
+          description: Total number of blacklist.
+          type: integer
+          format: int64
+        results:
+          type: array
+          description: List of the blacklist.
+          items:
+            $ref: '#/components/schemas/Blacklist'

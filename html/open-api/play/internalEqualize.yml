@@ -1,0 +1,130 @@
+openapi: 3.0.3
+info:
+  title: Internal Equalize Documentation
+  description: This endpoint is internal and does not require authentication. Its purpose is to provide equalize items. The equalize items can not be modified through this endpoint.
+  contact:
+    email: play@empathy.co
+  version: '1.0.0'
+servers:
+  - url: 'http://localhost:8080'
+    description: local
+  - url: 'https://play-api.kroger.internal.dataless.gcp.empathy.dev/'
+    description: kroger dataless
+  - url: 'https://play-api.carrefour.internal.dataless.gcp.empathy.dev/'
+    description: carrefour dataless
+
+paths:
+  /internal/equalize:
+    get:
+      tags:
+        - Equalize
+      summary: Returns equalize items for the default instance.
+      operationId: getAll
+      parameters:
+        - name: enabled
+          in: query
+          description: Filter results by the status (if it is active or not).
+          style: form
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultListEqualize'
+  /internal/{requestInstanceId}/equalize:
+    get:
+      tags:
+        - Equalize
+      summary: Returns equalize items for the given instance.
+      operationId: getAllByRequestInstanceId
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: Identifier of the instance.
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter results by the status (if it is active or not).
+          style: form
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultListEqualize'
+components:
+  schemas:
+    ResultListEqualize:
+      title: List of Equalize results
+      type: object
+      properties:
+        num_found:
+          type: integer
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/EqualizeResponse'
+    EqualizeField:
+      title: Equalize Field
+      required:
+        - boost
+        - field
+      type: object
+      properties:
+        boost:
+          description: Value between 0 and 10 to give more weight to a field.
+          minimum: 0
+          maximum: 10
+          exclusiveMaximum: false
+          exclusiveMinimum: false
+          type: number
+          format: float
+        field:
+          description: Field that be boosted.
+          type: string
+    EqualizeResponse:
+      title: Equalize Response
+      description: Equalize item definition.
+      required:
+        - enabled
+        - fields
+        - title
+      type: object
+      properties:
+        created_on:
+          description: When was created.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+        enabled:
+          description: Status of the element.
+          type: boolean
+        enabled_time:
+          type: integer
+          description: The time that equalizes has been active.
+        fields:
+          type: array
+          description: Array of the fields.
+          items:
+            $ref: '#/components/schemas/EqualizeField'
+        id:
+          type: string
+          description: Equalize identifier.
+        notes:
+          type: string
+          description: Field to add a comment.
+        title:
+          type: string
+          description: Name of the Equalize configuration.
+        updated_on:
+          type: string
+          description: When was updated.
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''

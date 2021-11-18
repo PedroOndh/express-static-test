@@ -1,0 +1,697 @@
+openapi: 3.0.3
+info:
+  title: Browse Configurations Documentation
+  description: The objective of this endpoint is to handle all the data required for the browse tooling. Each one represents a configuration of different tools for a specific context (for example, a specific category or a specific promotion page).
+  contact:
+    email: play@empathy.co
+  version: '1.0.0'
+servers:
+  - url: 'http://localhost:8080'
+    description: local
+  - url: 'https://play-api.kroger.internal.dataless.gcp.empathy.dev/'
+    description: kroger dataless
+  - url: 'https://play-api.carrefour.internal.dataless.gcp.empathy.dev/'
+    description: carrefour dataless
+tags:
+  - name: browse_configurations
+    description: Manage Browse Configurations
+paths:
+  /browse/configurations:
+    get:
+      tags:
+        - browse_configurations
+      summary: Retrieve browse configurations of the default instance.
+      operationId: getAll
+      parameters:
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          style: form
+          schema:
+            type: integer
+            default: 20
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendent.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by this field.
+          style: form
+          schema:
+            type: string
+        - name: pivots
+          in: query
+          description: "Filter by pivots.<br> NOTE: All these params need the prefix 'pivots'"
+          schema:
+            type: object
+            example:
+              {"pivots.lang": "es"}
+        - name: attribute_name
+          in: query
+          description: Filter results by the name of the attribute.
+          style: form
+          schema:
+            type: string
+        - name: attribute_values.name
+          in: query
+          description: Filter results by the name of the attribute value.
+          style: form
+          schema:
+            type: string
+        - name: attribute_values.id
+          in: query
+          description: Filter results by the id of the attribute value.
+          style: form
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter results by the status.
+          style: form
+          schema:
+            type: boolean
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultList_BrowseConfiguration'
+    post:
+      tags:
+        - browse_configurations
+      summary: Create a new browse configuration for the default instance.
+      operationId: post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BrowseConfiguration'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrowseConfiguration'
+  /browse/configurations/publish:
+    get:
+      tags:
+        - browse_configurations
+      summary: Publish all the available browse configurations of the default instance again. (see play worker details about publishing configurations)
+      operationId: publish
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '200':
+          description: OK
+  /browse/configurations/{id}:
+    get:
+      tags:
+        - browse_configurations
+      summary: Retrieve a specific browse configuration of the default instance by id.
+      operationId: get
+      parameters:
+        - name: id
+          in: path
+          description: Browse configuration identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrowseConfiguration'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+    put:
+      tags:
+        - browse_configurations
+      summary: Modify any field of a browse configuration of the default instance.
+      operationId: put
+      parameters:
+        - name: id
+          in: path
+          description: Browse configuration identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BrowseConfiguration'
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrowseConfiguration'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+    delete:
+      tags:
+        - browse_configurations
+      summary: Delete a specific browse configuration of the default instance.
+      operationId: delete
+      parameters:
+        - name: id
+          in: path
+          description: Browse configuration identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrowseConfiguration'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+  /{requestInstanceId}/browse/configurations:
+    get:
+      tags:
+        - browse_configurations
+      summary: Returns the browse configurations of the given instance.
+      operationId: getRequest
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: Identifier of the instance.
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          style: form
+          schema:
+            type: integer
+            default: 20
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendent.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by this field.
+          style: form
+          schema:
+            type: string
+        - name: pivots
+          in: query
+          description: "Filter by pivots.<br> NOTE: All these params need the prefix 'pivots'"
+          schema:
+            type: object
+            example:
+              {"pivots.lang": "es"}
+        - name: attribute_name
+          in: query
+          description: Filter results by the name of the attribute.
+          style: form
+          schema:
+            type: string
+        - name: attribute_values.name
+          in: query
+          description: Filter results by the name of the attribute value.
+          style: form
+          schema:
+            type: string
+        - name: attribute_values.id
+          in: query
+          description: Filter results by the id of the attribute value.
+          style: form
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter results by the status.
+          style: form
+          schema:
+            type: boolean
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultList_BrowseConfiguration'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+    post:
+      tags:
+        - browse_configurations
+      summary: Create a browse configurations for the given instance.
+      operationId: postRequest
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: Identifier of the instance.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BrowseConfiguration'
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrowseConfiguration'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+  '/{requestInstanceId}/browse/configurations/publish':
+    get:
+      tags:
+        - browse_configurations
+      summary: Publish all the available browse configurations of the given instance again. (see play worker details about publishing configurations)
+      operationId: getRequestPublish
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '200':
+          description: OK
+  '/{requestInstanceId}/browse/configurations/{id}':
+    get:
+      tags:
+        - browse_configurations
+      summary: Retrieve a specific browse configuration of the given instance by id.
+      operationId: getRequestId
+      parameters:
+        - name: id
+          in: path
+          description: Browse configuration identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier
+          required: true
+          style: simple
+          schema:
+            type: string
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrowseConfiguration'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+    put:
+      tags:
+        - browse_configurations
+      summary: Modify any field of a browse configuration of a given instance by id.
+      operationId: putRequestId
+      parameters:
+        - name: id
+          in: path
+          description: Browse configuration identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BrowseConfiguration'
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrowseConfiguration'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+    delete:
+      tags:
+        - browse_configurations
+      summary: Delete a browse configuration of a given instance by id.
+      operationId: deleteRequestId
+      parameters:
+        - name: id
+          in: path
+          description: Browse configuration identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      security:
+        - AUTHORIZATION:
+            - global
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrowseConfiguration'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+components:
+  schemas:
+    AttributeValue:
+      title: AttributeValue
+      required:
+        - id
+        - name
+      type: object
+      properties:
+        id:
+          type: string
+          description: Attribute value identifier
+        name:
+          type: string
+          description: Attribute value name
+    BrowseConfiguration:
+      title: BrowseConfiguration
+      description: Configuration of a specific context for browse.
+      required:
+        - context
+        - enabled
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identifier of the element.
+        name:
+          type: string
+          description: Name of the configuration. This field is just to remember the aim of having this configuration.
+        enabled:
+          type: boolean
+          description: Status of the configuration.
+        attributes_ranking:
+          $ref: '#/components/schemas/ElementsRankings'
+        context:
+          $ref: '#/components/schemas/BrowseContext'
+        facets:
+          $ref: '#/components/schemas/Facets'
+        metadata:
+          $ref: '#/components/schemas/Metadata'
+        products_ranking:
+          $ref: '#/components/schemas/ElementsRankings'
+    BrowseContext:
+      title: BrowseContext
+      description: Context in which the configuration will be applied.
+      type: object
+      properties:
+        inheritance:
+          type: boolean
+          description: Specify if the configuration is inherited by other contexts considered a child of this one.
+        attribute_name:
+          type: string
+          description: Name of the attribute
+        attribute_values:
+          type: array
+          description: List of the values for the attribute_name
+          items:
+            $ref: '#/components/schemas/AttributeValue'
+        pivots:
+          type: object
+          description: Mandatory filters that define the context of the configuration (for example, lang)
+          additionalProperties:
+            type: array
+            items:
+              description: Different possible values of each pivot
+              type: string
+    ElementRanking:
+      title: ElementRanking
+      description: Rule to specify some products that can be boosted or buried.
+      required:
+        - action
+        - field_name
+        - field_value
+      type: object
+      properties:
+        action:
+          type: string
+          description: Type of the action (BOOST or BURY).
+          enum:
+            - BOOST
+            - BURY
+        field_name:
+          type: string
+          description: Name of the product field used to find the affected products.
+        field_value:
+          type: string
+          description: Value of the product field used to find the affected products.
+        filters:
+          type: object
+          description: Specific context in which this rule will be applied.
+          additionalProperties:
+            type: array
+            items:
+              type: string
+        schedule:
+          $ref: '#/components/schemas/Schedule'
+    ElementsRankings:
+      title: ElementsRankings
+      type: object
+      properties:
+        elements:
+          description: List of elementRanking rules.
+          type: array
+          items:
+            $ref: '#/components/schemas/ElementRanking'
+    Facet:
+      title: Facet
+      description: Facet configuration
+      type: object
+      properties:
+        id:
+          type: string
+          description: Facet identifier
+        pretty_name:
+          type: string
+          description: Name that will be shown for this facet
+        sort_type:
+          type: string
+          description: Sorting criteria for facet values
+          enum:
+            - ALPHABETICALLY
+            - RESULTS_NUMBER
+        values_ranking:
+          type: array
+          description: Rules to define if a facet value is boosted or buried in the facet values list.
+          items:
+            $ref: '#/components/schemas/ValueRanking'
+    Facets:
+      title: Facets
+      type: object
+      properties:
+        elements:
+          type: array
+          description: List of facet configurations.
+          items:
+            $ref: '#/components/schemas/Facet'
+    Metadata:
+      title: Metadata
+      description: Data of the configuration itself.
+      type: object
+      properties:
+        created_on:
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+          description: When was created.
+        updated_on:
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+          description: When was updated the last time.
+        user:
+          type: string
+          description: Who was the last one that modified it.
+    ResultList_BrowseConfiguration:
+      title: ResultList<BrowseConfiguration>
+      type: object
+      properties:
+        num_found:
+          type: integer
+          format: int64
+          description: Total number of browse configurations.
+        results:
+          type: array
+          description: List of browse configurations.
+          items:
+            $ref: '#/components/schemas/BrowseConfiguration'
+    Schedule:
+      title: Schedule
+      description: Define the starting and ending points of a configuration
+      type: object
+      properties:
+        activation_date:
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+          description: Activation datetime.
+        deactivation_date:
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+          description: Deactivation datetime.
+    ValueRanking:
+      title: ValueRanking
+      description: Rule to define if a value id is boosted or buried.
+      type: object
+      properties:
+        action:
+          description: Action of the rule
+          type: string
+          enum:
+            - BOOST
+            - BURY
+        id:
+          type: string
+          description: Identifier of the value.
+    NotFound:
+      title: NotFound
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+          description: Datetime of the request.
+        status:
+          type: string
+          example: 404
+          description: HTTP status code of the request.
+        error:
+          type: string
+          example: NOT_FOUND
+          description: HTTP status identifier
+        details:
+          type: object
+          description: Specific details of the error.
+          properties:
+            id:
+              type: string
+              example: NOT_FOUND
+              description: Error identifier.
+            message:
+              type: string
+              example: No browse configuration found for id 123456789L
+              description: Description of the error.
+  securitySchemes:
+    AUTHORIZATION:
+      type: apiKey
+      name: AUTHORIZATION
+      in: header

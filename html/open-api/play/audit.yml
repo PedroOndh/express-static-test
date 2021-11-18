@@ -1,0 +1,376 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Audit Endpoint
+  description: The objective of this endpoint is to retrieve all the audits made over the different tools in the play service. Each audit represents a change over a tool.
+  contact:
+    email: play@empathy.co
+servers:
+  - url: 'http://localhost:8080'
+    description: local
+  - url: 'https://play-api.kroger.internal.dataless.gcp.empathy.dev/'
+    description: kroger dataless
+  - url: 'https://play-api.carrefour.internal.dataless.gcp.empathy.dev/'
+    description: carrefour dataless
+tags:
+  - name: Audit
+    description: Manage Audit
+paths:
+  /audit:
+    get:
+      tags:
+        - Audit
+      summary:  Retrieve audits of the default instance.
+      operationId: getAllAudit
+      parameters:
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          schema:
+            type: integer
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+        - name: sort.field
+          in: query
+          description: Sort the values by this field.
+          schema:
+            type: string
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendent.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: payload.object_id
+          in: query
+          description: Filter by the id of the object of the payload.
+          schema:
+            type: string
+        - name: payload.object_types
+          in: query
+          description: Filter by a sequence of object types of the payload with format TYPE1,TYPE2,...
+          schema:
+            type: array
+            items:
+              type: string
+          explode: false
+        - name: payload.actions
+          in: query
+          description: Filter by a sequence of actions of the payload with format ACTION1,ACTION2,...
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - CREATE
+                - UPDATE
+                - DELETE
+                - IMPORT
+                - PUBLISH
+          explode: false
+        - name: end_date
+          in: query
+          description: Filter up to this date.
+          schema:
+            type: string
+        - name: start_date
+          in: query
+          description: Filter from this date.
+          schema:
+            type: string
+        - name: query
+          in: query
+          description: Parameter used to do a search by user and objectId.
+          schema:
+            type: string
+        - name: strictMatching
+          in: query
+          description: Parameter used to make a search, if true, it will make a strict search and it is false, it will make a partial search. <br> Note :Is neccesary the field query to use this filter.
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Audit'
+      security:
+        - AUTHORIZATION:
+            - global
+
+  /{requestInstanceId}/audit:
+    get:
+      tags:
+        - Audit
+      summary: Returns the audits of the given instance.
+      operationId: getAllAuditInstanceId
+      parameters:
+        - name: requestInstanceId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          schema:
+            type: integer
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+        - name: sort.field
+          in: query
+          description: Sort the values by this field.
+          schema:
+            type: string
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendent.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: payload.object_id
+          in: query
+          description: Filter by the id of the object of the payload.
+          schema:
+            type: string
+        - name: payload.object_types
+          in: query
+          description: Filter a sequence of object types of the payload with format TYPE1,TYPE2,...
+          schema:
+            type: array
+            items:
+              type: string
+          explode: false
+        - name: payload.actions
+          in: query
+          description: Filter by a sequence of actions of the payload with format ACTION1,ACTION2,...
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - CREATE
+                - UPDATE
+                - DELETE
+                - IMPORT
+                - PUBLISH
+          explode: false
+        - name: end_date
+          in: query
+          description: Filter up to this date.
+          schema:
+            type: string
+        - name: start_date
+          in: query
+          description: Filter from this date.
+          schema:
+            type: string
+        - name: query
+          in: query
+          description: Parameter used to do a search by user and objectId.
+          schema:
+            type: string
+        - name: strictMatching
+          in: query
+          description: Parameter used to make a search, if true, it will make a strict search and it is false, it will make a partial search. <br> Note :Is neccesary the field query to use this filter.
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Audit'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+
+      security:
+        - AUTHORIZATION:
+            - global
+
+  /audit/{id}:
+    get:
+      tags:
+        - Audit
+      summary:  Retrieve a specific audit of the default instance by id.
+      operationId: getAuditId
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Audit'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+
+      security:
+        - AUTHORIZATION:
+            - global
+
+  /{requestInstanceId}/audit/{id}:
+    get:
+      tags:
+        - Audit
+      summary: Retrieve a specific audit of the given instance by id.
+      operationId: getAuditInstanceId
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: requestInstanceId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Audit'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+
+      security:
+        - AUTHORIZATION:
+            - global
+
+components:
+  schemas:
+    Audit:
+      title: Audit
+      type: object
+      properties:
+        instance:
+          type: string
+          example: "carrefour"
+          description: When was it last built.
+        id:
+          type: string
+          example: "123456789L"
+          description: Identifier of the Audit.
+        date:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+          description: Date when the audit was created.
+        user:
+          type: string
+          example: "George Gastrell"
+          description: Date when the audit was created.
+        payload:
+          type: array
+          description: Audit information.
+          items:
+            $ref: '#/components/schemas/ToolingPayload'
+    ToolingPayload:
+      title: ToolingPayload
+      type: object
+      properties:
+        previousState:
+          type: object
+          description: State prior to modification.<br>Note.This parameter is of type object that allows any object of type tooling for example:synonyms, blacklist, searchConfigurations...
+        nextState:
+          type: object
+          description: State after modification.<br>Note.This parameter is of type object that allows any object of type tooling for example:synonyms, blacklist, searchConfigurations...
+        objectType:
+          type: string
+          description: Type of endpoint on which the change was made.
+          enum:
+            - REDIRECTION
+            - PROMOTION
+            - ATTRIBUTES
+            - PRODUCTS
+            - BLACKLIST
+            - EQUALIZE
+            - BROWSE_CONFIGURATION
+            - SEARCH_CONFIGURATION
+            - SYNONYM
+            - INSTANCES
+        objectId:
+          type: string
+          example: "123456789L"
+          description: Identifier of the endpoint being changed.
+        action:
+          type: string
+          example: "CREATE"
+          description: Action performed on the endpoint.
+          enum:
+            - CREATE
+            - DELETE
+            - UPDATE
+            - PUBLISH
+            - IMPORT
+    NotFound:
+      title: NotFound
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+          description: Datetime of the request.
+        status:
+          type: string
+          example: 404
+          description: HTTP status code of the request.
+        error:
+          type: string
+          example: NOT_FOUND
+          description: HTTP status identifier.
+        details:
+          type: object
+          description: Specific details of the error.
+          properties:
+            id:
+              type: string
+              example: NOT_FOUND
+              description: Error identifier.
+            message:
+              type: string
+              example: No audit found for id 123456789L
+              description: Description of the error.
+
+  securitySchemes:
+    AUTHORIZATION:
+      type: apiKey
+      name: AUTHORIZATION
+      in: header

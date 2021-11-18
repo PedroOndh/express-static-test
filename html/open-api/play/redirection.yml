@@ -1,0 +1,849 @@
+openapi: 3.0.3
+info:
+  title: Redirection Documentation
+  description: The goal of this endpoint is to handle all the redirections. Each one represents a redirect to another URL instead of displaying the search results.
+  contact:
+    email: play@empathy.co
+  version: '1.0.0'
+servers:
+  - url: 'http://localhost:8080'
+    description: local
+  - url: 'https://play-api.kroger.internal.dataless.gcp.empathy.dev/'
+    description: kroger dataless
+  - url: 'https://play-api.carrefour.internal.dataless.gcp.empathy.dev/'
+    description: carrefour dataless
+tags:
+  - name: redirections
+    description: Manage Client Redirections
+paths:
+  /redirection:
+    get:
+      tags:
+        - redirections
+      summary: Retrieve redirections of the default instance.
+      operationId: getAll
+      parameters:
+        - name: enabled
+          in: query
+          description: Filter results by the status.
+          required: false
+          schema:
+            type: boolean
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          style: form
+          schema:
+            type: integer
+            default: 20
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendant.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by specific field
+          style: form
+          schema:
+            type: string
+        - name: visible
+          in: query
+          description: Filter by visible items (those enabled always, and those enabled with the schedule started)
+          style: form
+          schema:
+            type: boolean
+        - name: langs
+          in: query
+          description: Filter by one or more languages
+          style: form
+          schema:
+            type: string
+        - name: keyword
+          in: query
+          style: form
+          description: Filter by keyword.
+          schema:
+            type: string
+        - name: filters
+          in: query
+          description: "Filter by custom client attributes.<br> NOTE: All these params need the prefix 'filters.'"
+          schema:
+            type: object
+            additionalProperties: true
+            example:
+              {"filters.scope": "desktop"}
+        - name: search
+          in: query
+          description: Search redirections as an exact match.
+          style: form
+          schema:
+            type: string
+        - name: psearch
+          in: query
+          description: Search redirections as a parcial match.
+          style: form
+          schema:
+            type: string
+        - name: kw
+          in: query
+          description: Search redirections as an exact match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+        - name: pkw
+          in: query
+          description: Search redirections as a parcial match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultList_Redirection'
+    post:
+      tags:
+        - redirections
+      summary: Creates the redirection for the default instance.
+      operationId: post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Redirection'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/redirection/{id}':
+    get:
+      tags:
+        - redirections
+      summary: Retrieve a specific redirection of the default instance by id.
+      operationId: getId
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+    put:
+      tags:
+        - redirections
+      summary: Update a redirection by id.
+      operationId: putId
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Redirection'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+    delete:
+      tags:
+        - redirections
+      summary: Delete a specific redirection of the default instance.
+      operationId: deleteId
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/redirection/{id}/disable':
+    put:
+      tags:
+        - redirections
+      summary: Disable the redirection of the default instance by id.
+      operationId: disable
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/redirection/{id}/enable':
+    put:
+      tags:
+        - redirections
+      summary: Enable the redirection of the default instance by id.
+      operationId: enable
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/redirection/import':
+    post:
+      tags:
+        - redirections
+      summary: Upload a file to import redirections for the default instance.
+      operationId: import
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - file
+                - lang
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                lang:
+                  type: string
+                  description: redirections language
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportResponse_Redirection'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/{requestInstanceId}/redirection':
+    get:
+      tags:
+        - redirections
+      summary: Returns all the redirections for the given instance.
+      operationId: getRequest
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter results by the status.
+          required: false
+          schema:
+            type: boolean
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          style: form
+          schema:
+            type: integer
+            default: 20
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendant.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by specific field
+          style: form
+          schema:
+            type: string
+        - name: visible
+          in: query
+          description: Filter by visible items (those enabled always, and those enabled with the schedule started)
+          style: form
+          schema:
+            type: boolean
+        - name: langs
+          in: query
+          description: Filter by one or more languages
+          style: form
+          schema:
+            type: string
+        - name: keyword
+          in: query
+          style: form
+          description: Filter by keyword.
+          schema:
+            type: string
+        - name: filters
+          in: query
+          description: "Filter by custom client attributes.<br> NOTE: All these params need the prefix 'filters.'"
+          schema:
+            type: object
+            additionalProperties: true
+            example:
+              {"filters.scope": "desktop"}
+        - name: search
+          in: query
+          description: Search redirections as an exact match.
+          style: form
+          schema:
+            type: string
+        - name: psearch
+          in: query
+          description: Search redirections as a parcial match.
+          style: form
+          schema:
+            type: string
+        - name: kw
+          in: query
+          description: Search redirections as an exact match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+        - name: pkw
+          in: query
+          description: Search redirections as a parcial match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultList_Redirection'
+    post:
+      tags:
+        - redirections
+      summary: Creates a redirection for the given instance.
+      operationId: postRequest
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Redirection'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/{requestInstanceId}/redirection/{id}':
+    get:
+      tags:
+        - redirections
+      summary: Retrieve a specific redirection of the given instance by id.
+      operationId: getRequestId
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+    put:
+      tags:
+        - redirections
+      summary: For the given instance and id, modifies any synonym’s field.
+      operationId: putRequestId
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Redirection'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+    delete:
+      tags:
+        - redirections
+      summary: Deletes a redirection of a given instance by id.
+      operationId: deleteRequestId
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/{requestInstanceId}/redirection/{id}/disable':
+    put:
+      tags:
+        - redirections
+      summary: Disable the redirection of an instance by the id.
+      operationId: disableRequestId
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/{requestInstanceId}/redirection/{id}/enable':
+    put:
+      tags:
+        - redirections
+      summary: Enable the redirection of a instance by the id.
+      operationId: enableRequestId
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Redirection'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/{requestInstanceId}/redirection/import':
+    post:
+      tags:
+        - redirections
+      summary:  Upload a file to import redirections for the given instance.
+      operationId: importRequest
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: Instance identifier.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - file
+                - lang
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                lang:
+                  type: string
+                  description: redirections language
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportResponse_Redirection'
+      security:
+        - AUTHORIZATION:
+            - global
+components:
+  schemas:
+    Redirection:
+      title: Redirection
+      required:
+        - langs
+        - enabled
+        - url
+        - keywords
+      type: object
+      properties:
+        id:
+          description: Redirection identifier.
+          type: string
+        enabled:
+          description: Status of the redirection.
+          type: boolean
+        filters:
+          description: Custom redirection properties.
+          type: object
+        keywords:
+          type: array
+          description: List of keywords for which the redirection will be applied.
+          items:
+            type: string
+        langs:
+          description: Languages where the redirection will be applied.
+          type: array
+          items:
+            type: string
+        schedule:
+          $ref: '#/components/schemas/Schedule'
+        created_on:
+          description: When was created.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+        updated_on:
+          description: When was updated.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+        url:
+          description: URL to be redirected.
+          type: string
+        metadata:
+          $ref: '#/components/schemas/Metadata'
+    Metadata:
+      title: Metadata
+      description: Data of the configuration itself.
+      type: object
+      properties:
+        created_on:
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+          description: When was created.
+        updated_on:
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+          description: When was updated the last time.
+        user:
+          type: string
+          description: Who was the last one that modified it.
+    ResultList_Redirection:
+      title: ResultList«Redirection»
+      type: object
+      properties:
+        num_found:
+          description: Total number of redirections.
+          type: integer
+          format: int64
+        results:
+          type: array
+          description: List of redirections.
+          items:
+            $ref: '#/components/schemas/Redirection'
+    Schedule:
+      title: Schedule
+      type: object
+      properties:
+        activation_date:
+          description: Datetime when the promotion will start to be available.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+        deactivation_date:
+          description: Datetime when the promotion will stop to be available.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+
+    ImportResponse_Redirection:
+      title: ImportResponse«Redirection»
+      type: object
+      properties:
+        elements:
+          type: array
+          description: List of created redirections.
+          items:
+            $ref: '#/components/schemas/Redirection'
+        errors:
+          description: Errors detected.
+          type: array
+          items:
+            $ref: '#/components/schemas/Error'
+        failures:
+          type: integer
+          description: Number of failures.
+          format: int32
+        successful:
+          type: integer
+          description: Number of creations.
+          format: int32
+
+    Error:
+      title: Error
+      type: object
+      properties:
+        conflicting_elements:
+          description: Duplicate keywords conflicts in the creation of redirection.
+          type: object
+        field:
+          type: array
+          description: List of field that are failing.
+          items:
+            type: string
+        id:
+          type: string
+          description: Error types.
+          enum:
+            - DUPLICATED
+            - FORBIDDEN
+            - INTERNAL_ERROR
+            - INVALID_FIELD
+            - INVALID_PARAMETER
+            - NOT_FOUND
+            - UNAUTHORIZED
+        message:
+          type: string
+
+    NotFound:
+      title: NotFound
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+          description: Datetime of the request.
+        status:
+          type: string
+          example: 404
+          description: HTTP status code of the request.
+        error:
+          type: string
+          example: NOT_FOUND
+          description: HTTP status identifier.
+        details:
+          type: object
+          description: Specific details of the error.
+          properties:
+            id:
+              type: string
+              example: NOT_FOUND
+              description: Error identifier.
+            message:
+              type: string
+              example: No redirection found for id 123456789L.
+              description: Description of the error.
+  securitySchemes:
+    AUTHORIZATION:
+      type: apiKey
+      name: AUTHORIZATION
+      in: header

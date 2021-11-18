@@ -1,0 +1,706 @@
+openapi: 3.0.3
+info:
+  title: Equalize Documentation
+  description: These endpoints aim at managing equalize consumed by the Search service when it needs weights for cataloged product’s fields.
+  contact:
+    email: play@empathy.co
+  version: '1.0.0'
+servers:
+  - url: 'http://localhost:8080'
+    description: local
+  - url: 'https://play-api.kroger.internal.dataless.gcp.empathy.dev/'
+    description: kroger dataless
+  - url: 'https://play-api.carrefour.internal.dataless.gcp.empathy.dev/'
+    description: carrefour dataless
+tags:
+  - name: Equalize
+    description: Manage Equalize
+paths:
+  /equalize:
+    get:
+      tags:
+        - Equalize
+      summary: Retrieves equalize items for the default instance.
+      operationId: getAll
+      parameters:
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          style: form
+          schema:
+            type: integer
+            default: 20
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendent.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by this field.
+          style: form
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter by enabled/disabled state
+          required: false
+          schema:
+            type: boolean
+        - name: lang
+          in: query
+          description: Language to filter.
+          style: form
+          schema:
+            type: string
+        - name: search
+          in: query
+          description: Search equalize items by title as an exact match.
+          style: form
+          schema:
+            type: string
+            enum:
+              - search
+        - name: psearch
+          in: query
+          description: Search equalize items by title as a parcial match.
+          style: form
+          schema:
+            type: string
+            enum:
+              - psearch
+        - name: kw
+          in: query
+          description: Search equalize items by title as an exact match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+            enum:
+              - kw
+        - name: pkw
+          in: query
+          description: Search equalize items by title as a parcial match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+            enum:
+              - pkw
+
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultList_Equalize'
+    post:
+      tags:
+        - Equalize
+      summary: Creates a new equalize item for the default instance.
+      operationId: post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Equalize'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equalize_Response'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/equalize/{id}':
+    get:
+      tags:
+        - Equalize
+      summary: For the default instance, it retrieves a specific equalize item by id.
+      operationId: getId
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the value.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equalize'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+    put:
+      tags:
+        - Equalize
+      summary: Modify any field of a equalize of the default instance.
+      operationId: putId
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the value.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Equalize'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equalize_Response'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+    delete:
+      tags:
+        - Equalize
+      summary: Deletes a specific equalize item of the default instance.
+      operationId: deleteId
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the value.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equalize_Response'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/{requestInstanceId}/equalize':
+    get:
+      tags:
+        - Equalize
+      summary: Returns all the equalize for the given instance.
+      operationId: getAllRequestInstanceId
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: requestInstanceId
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          style: form
+          schema:
+            type: integer
+            default: 20
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendent.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by this field.
+          style: form
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter by enabled/disabled state
+          required: false
+          schema:
+            type: boolean
+        - name: lang
+          in: query
+          description: Language to filter.
+          style: form
+          schema:
+            type: string
+        - name: search
+          in: query
+          description: Search equalize items by title as an exact match.
+          style: form
+          schema:
+            type: string
+            enum:
+              - search
+        - name: psearch
+          in: query
+          description: Search equalize items by title as a parcial match.
+          style: form
+          schema:
+            type: string
+            enum:
+              - psearch
+        - name: kw
+          in: query
+          description: Search equalize items by title as an exact match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+            enum:
+              - kw
+        - name: pkw
+          in: query
+          description: Search equalize items by title as a parcial match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+            enum:
+              - pkw
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResultList_Equalize'
+      security:
+        - AUTHORIZATION:
+            - global
+    post:
+      tags:
+        - Equalize
+      summary: Creates a equalize for the given instance.
+      operationId: postRequestInstanceId
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: requestInstanceId
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Equalize'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equalize_Response'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/{requestInstanceId}/equalize/{id}':
+    get:
+      tags:
+        - Equalize
+      summary: Retrieves a given instance’s specific equalize by id.
+      operationId: getIdRquestInstanceId
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: requestInstanceId
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: id
+          in: path
+          description: Identifier of the value.
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: start
+          in: query
+          description: Number of items to skip.
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: Number of items to be returned.
+          style: form
+          schema:
+            type: integer
+            default: 20
+        - name: sort.direction
+          in: query
+          description: Direction to sort results, ascendent or descendent.
+          style: form
+          schema:
+            type: string
+            default: ASC
+            enum:
+              - ASC
+              - DESC
+        - name: sort.field
+          in: query
+          description: Sort the values by this field.
+          style: form
+          schema:
+            type: string
+        - name: enabled
+          in: query
+          description: Filter by enabled/disabled state
+          required: false
+          schema:
+            type: boolean
+        - name: lang
+          in: query
+          description: Language to filter.
+          style: form
+          schema:
+            type: string
+        - name: search
+          in: query
+          description: Search equalize items by title as an exact match.
+          style: form
+          schema:
+            type: string
+            enum:
+              - search
+        - name: psearch
+          in: query
+          description: Search equalize items by title as a parcial match.
+          style: form
+          schema:
+            type: string
+            enum:
+              - psearch
+        - name: kw
+          in: query
+          description: Search equalize items by title as an exact match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+            enum:
+              - kw
+        - name: pkw
+          in: query
+          description: Search equalize items by title as a parcial match.
+          deprecated: true
+          style: form
+          schema:
+            type: string
+            enum:
+              - pkw
+
+
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equalize'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+    put:
+      tags:
+        - Equalize
+      summary:  For the given instance and id, it modifies any equalize’s field.
+      operationId: putIdRequestInstanceId
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: requestInstanceId
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: id
+          in: path
+          description: Identifier of the value.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Equalize'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equalize_Response'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+    delete:
+      tags:
+        - Equalize
+      summary: Deletes a equalize of a given instance by id.
+      operationId: deleteIdRequestInstanceId
+      parameters:
+        - name: requestInstanceId
+          in: path
+          description: requestInstanceId
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: id
+          in: path
+          description: Identifier of the value.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equalize_Response'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+  '/{id}/enable/equalize':
+    put:
+      tags:
+        - Equalize
+      summary: Enables a specific equalize item.
+      operationId: putIdEnabled
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the value.
+          required: true
+          style: simple
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Equalize'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equalize_Response'
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/NotFound'
+      security:
+        - AUTHORIZATION:
+            - global
+
+components:
+  schemas:
+    ResultList_Equalize:
+      title: ResultList_Equalize
+      type: object
+      properties:
+        num_found:
+          type: integer
+          format: int64
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Equalize_Response'
+    EqualizeField:
+      title: EqualizeField
+      required:
+        - boost
+        - field
+      type: object
+      properties:
+        boost:
+          description: Value between 0 and 10 that adjusts to give more weight on a field.
+          maximum: 9223372036854776000
+          exclusiveMaximum: false
+          minimum: 0
+          exclusiveMinimum: false
+          type: number
+          format: float
+        field:
+          description: Field about do the boost.
+          type: string
+    Equalize:
+      title: Equalize
+      required:
+        - enabled
+      type: object
+      properties:
+        created_on:
+          description: When was created.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+        enabled:
+          description: Status of the element.
+          type: boolean
+        fields:
+          type: array
+          description: Array the fields.
+          items:
+            $ref: '#/components/schemas/EqualizeField'
+        id:
+          type: string
+          description: Equalize identifier.
+        notes:
+          type: string
+          description: Field to add a comment.
+        title:
+          type: string
+          description: Name of the field for which equalize.
+        updated_on:
+          type: string
+          description: When was updated.
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+
+    Equalize_Response:
+      title: Equalize Response
+      required:
+        - enabled
+      type: object
+      properties:
+        created_on:
+          description: When was created.
+          type: string
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+        enabled:
+          description: Status of the element.
+          type: boolean
+        enabled_time:
+          type: integer
+          format: int64
+          description: The time that equalizes has been active.
+        fields:
+          type: array
+          description: Array the fields.
+          items:
+            $ref: '#/components/schemas/EqualizeField'
+        id:
+          type: string
+          description: Equalize identifier.
+        notes:
+          type: string
+          description: Field to add a comment.
+        title:
+          type: string
+          description: Name of the field for which equalize.
+        updated_on:
+          type: string
+          description: When was updated.
+          example: 'yyyy-MM-dd''T''HH:mm:ss''Z'''
+    NotFound:
+      title: NotFound
+      type: object
+      properties:
+        timestamp:
+          type: string
+          example: 2020-09-09T06:43:01.899+0000
+          description: Datetime of the request.
+        status:
+          type: string
+          example: 404
+          description: HTTP status code of the request.
+        error:
+          type: string
+          example: NOT_FOUND
+          description: HTTP status identifier
+        details:
+          type: object
+          description: Specific details of the error.
+          properties:
+            id:
+              type: string
+              example: NOT_FOUND
+              description: Error identifier.
+            message:
+              type: string
+              example: No Equalize found for id 123456789L
+              description: Description of the error.
+  securitySchemes:
+    AUTHORIZATION:
+      type: apiKey
+      name: AUTHORIZATION
+      in: header
