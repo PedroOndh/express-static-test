@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[133],{498:function(n,t,e){"use strict";e.r(t),e.d(t,"fetchRecommendations",(function(){return r}));var o=e(37),r=function(n,t){return t?o.XPlugin.adapter.getTopRecommendations(t).then((function(n){return n.results})):[]}}}]);

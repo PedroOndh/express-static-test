@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[526],{555:function(t,e,n){"use strict";n.r(e),n.d(e,"BaseFilterEntityModifier",(function(){return i}));var i=function(){function t(t,e){this.store=t,this.entity=e}return t.prototype.select=function(t){this.entity.select(t)},t.prototype.deselect=function(t){this.entity.deselect(t)},t}()}}]);

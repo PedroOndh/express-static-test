@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[91],{442:function(e,n,t){"use strict";t.r(n),t.d(n,"fetchNextQueries",(function(){return r}));var u=t(37),r=function(e,n){return n?u.XPlugin.adapter.getNextQueries(n).then((function(e){return e.nextQueries})):null}}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[146],{463:function(n,e,t){"use strict";t.r(e),t.d(e,"fetchRelatedTags",(function(){return r}));var a=t(37),r=function(n,e){return e?a.XPlugin.adapter.getRelatedTags(e).then((function(n){return n.relatedTags})):[]}}}]);

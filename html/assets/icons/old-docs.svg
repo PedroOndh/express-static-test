@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="23px" viewBox="0 0 20 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>edocs/UI_elements/Icon/sidebar/resources</title>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="leftMenu/3leves" transform="translate(-17.000000, -444.000000)">
-            <g id="leftMenu/Resouces/off-Copy-3" transform="translate(16.999990, 445.000000)">
-                <g id="edocs/UI_elements/Icon/sidebar/resources" transform="translate(0.000000, 0.012388)">
-                    <path d="M19.056457,-0.665478637 C18.7285972,-0.773572601 18.3548272,-0.620841631 18.2215597,-0.324282363 C17.0329794,2.31952643 14.4708728,4.24963477 11.3679265,4.83864979 L10.3225716,5.03708368 L10.726462,4.5098533 C10.9294186,4.24491794 10.8589929,3.89110065 10.5691652,3.71959771 C10.2792494,3.54827659 9.87985259,3.62409187 9.67670581,3.8890083 L8.38551992,5.57456282 C8.18250347,5.83950955 8.25292922,6.19332684 8.54280621,6.36476539 L10.3865471,7.45523422 C10.5315103,7.54092129 10.7038314,7.56484037 10.8653522,7.53418693 C11.0268104,7.50353106 11.1774085,7.41831404 11.2789467,7.28583499 C11.4818927,7.0208466 11.4114775,6.66708234 11.1216498,6.4955794 L10.5449249,6.15449377 L11.5902798,5.95605987 C15.1301731,5.28410165 18.0529384,3.08262169 19.4086256,0.0671478488 C19.5419636,-0.229369758 19.3842569,-0.557373304 19.056457,-0.665478637 Z" id="Combined-Shape" fill="#243C47" transform="translate(13.862778, 3.423372) scale(-1, 1) rotate(-180.000000) translate(-13.862778, -3.423372) "></path>
-                    <line x1="9.55505037" y1="12.6852772" x2="13.3276786" y2="10.3889379" id="Path-24" stroke="#1E3D49" stroke-linecap="round" stroke-linejoin="round"></line>
-                    <line x1="15.3893623" y1="12.4954602" x2="17.8022412" y2="12.4954602" id="Path-25" stroke="#1E3D49" stroke-width="0.75" stroke-linecap="round"></line>
-                    <line x1="0.912088967" y1="12.4954602" x2="3.32496786" y2="12.4954602" id="Path-25" stroke="#1E3D49" stroke-width="0.75" stroke-linecap="round"></line>
-                    <line x1="14.7861426" y1="9.55005287" x2="16.6708155" y2="8.37188993" id="Path-25" stroke="#1E3D49" stroke-linecap="round"></line>
-                    <line x1="2.04351463" y1="16.6190305" x2="4.13312904" y2="15.4408676" id="Path-25" stroke="#1E3D49" stroke-width="0.75" stroke-linecap="round"></line>
-                    <line x1="12.9764834" y1="6.51986725" x2="13.6714807" y2="5.48463414" id="Path-25" stroke="#1E3D49" stroke-linecap="round"></line>
-                    <line x1="5.13462702" y1="19.6376935" x2="6.34106647" y2="17.5970554" id="Path-25" stroke="#1E3D49" stroke-width="0.75" stroke-linecap="round"></line>
-                    <line x1="9.32386622" y1="4.64242192" x2="9.39046393" y2="4.64242192" id="Path-25" stroke="#1E3D49" stroke-linecap="round" transform="translate(9.357165, 4.642422) rotate(-90.000000) translate(-9.357165, -4.642422) "></line>
-                    <line x1="8.17900213" y1="19.5644379" x2="10.535328" y2="19.5644379" id="Path-25" stroke="#1E3D49" stroke-width="0.75" stroke-linecap="round" transform="translate(9.357165, 19.564438) rotate(-90.000000) translate(-9.357165, -19.564438) "></line>
-                    <line x1="6.34106647" y1="7.39386504" x2="5.13462702" y2="5.35322696" id="Path-25" stroke="#1E3D49" stroke-width="0.75" stroke-linecap="round"></line>
-                    <line x1="13.5797031" y1="19.6376935" x2="12.3732637" y2="17.5970554" id="Path-25" stroke="#1E3D49" stroke-width="0.75" stroke-linecap="round"></line>
-                    <line x1="4.13312904" y1="9.55005287" x2="2.04351463" y2="8.37188993" id="Path-25" stroke="#1E3D49" stroke-width="0.75" stroke-linecap="round"></line>
-                    <line x1="16.6708155" y1="16.6190305" x2="14.5812011" y2="15.4408676" id="Path-25" stroke="#1E3D49" stroke-width="0.75" stroke-linecap="round"></line>
+<svg width="20px" height="23px" viewBox="0 0 20 23" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(-17.000000, -444.000000)">
+            <g  transform="translate(16.999990, 445.000000)">
+                <g  transform="translate(0.000000, 0.012388)">
+                    <path d="M19.056457,-0.665478637 C18.7285972,-0.773572601 18.3548272,-0.620841631 18.2215597,-0.324282363 C17.0329794,2.31952643 14.4708728,4.24963477 11.3679265,4.83864979 L10.3225716,5.03708368 L10.726462,4.5098533 C10.9294186,4.24491794 10.8589929,3.89110065 10.5691652,3.71959771 C10.2792494,3.54827659 9.87985259,3.62409187 9.67670581,3.8890083 L8.38551992,5.57456282 C8.18250347,5.83950955 8.25292922,6.19332684 8.54280621,6.36476539 L10.3865471,7.45523422 C10.5315103,7.54092129 10.7038314,7.56484037 10.8653522,7.53418693 C11.0268104,7.50353106 11.1774085,7.41831404 11.2789467,7.28583499 C11.4818927,7.0208466 11.4114775,6.66708234 11.1216498,6.4955794 L10.5449249,6.15449377 L11.5902798,5.95605987 C15.1301731,5.28410165 18.0529384,3.08262169 19.4086256,0.0671478488 C19.5419636,-0.229369758 19.3842569,-0.557373304 19.056457,-0.665478637 Z" fill="currentColor" fill-opacity="0.9" transform="translate(13.862778, 3.423372) scale(-1, 1) rotate(-180.000000) translate(-13.862778, -3.423372) "></path>
+                    <line x1="9.55505037" y1="12.6852772" x2="13.3276786" y2="10.3889379"  stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round"  stroke-linejoin="round"></line>
+                    <line x1="15.3893623" y1="12.4954602" x2="17.8022412" y2="12.4954602"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
+                    <line x1="0.912088967" y1="12.4954602" x2="3.32496786" y2="12.4954602"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
+                    <line x1="14.7861426" y1="9.55005287" x2="16.6708155" y2="8.37188993"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
+                    <line x1="2.04351463" y1="16.6190305" x2="4.13312904" y2="15.4408676"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
+                    <line x1="12.9764834" y1="6.51986725" x2="13.6714807" y2="5.48463414"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
+                    <line x1="5.13462702" y1="19.6376935" x2="6.34106647" y2="17.5970554"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
+                    <line x1="9.32386622" y1="4.64242192" x2="9.39046393" y2="4.64242192"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round" transform="translate(9.357165, 4.642422) rotate(-90.000000) translate(-9.357165, -4.642422) "></line>
+                    <line x1="8.17900213" y1="19.5644379" x2="10.535328" y2="19.5644379"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round" transform="translate(9.357165, 19.564438) rotate(-90.000000) translate(-9.357165, -19.564438) "></line>
+                    <line x1="6.34106647" y1="7.39386504" x2="5.13462702" y2="5.35322696"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
+                    <line x1="13.5797031" y1="19.6376935" x2="12.3732637" y2="17.5970554"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
+                    <line x1="4.13312904" y1="9.55005287" x2="2.04351463" y2="8.37188993"  stroke="currentColor" stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
+                    <line x1="16.6708155" y1="16.6190305" x2="14.5812011" y2="15.4408676"  stroke="currentColor"  stroke-opacity="0.8" stroke-width="0.75" stroke-linecap="round"></line>
                 </g>
             </g>
         </g>
-    </g>
 </svg>

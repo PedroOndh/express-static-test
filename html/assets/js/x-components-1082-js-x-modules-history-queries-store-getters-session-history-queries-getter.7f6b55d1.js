@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[62],{512:function(n,s,i){"use strict";i.r(s),i.d(s,"sessionHistoryQueries",(function(){return e}));var e=function(n){var s=n.sessionTimeStampInMs;return n.historyQueries.filter((function(n){return n.timestamp>s}))}}}]);

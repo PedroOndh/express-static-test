@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[79],{458:function(e,n,s){"use strict";s.r(n),s.d(n,"identifierResultsRequest",(function(){return r}));var t=s(1),r=function(e){var n=e.config,s=e.query,r=e.params;return s.trim()?Object(t.__assign)(Object(t.__assign)({query:s},r),{rows:n.maxItemsToRequest,start:0}):null}}}]);

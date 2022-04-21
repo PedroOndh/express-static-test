@@ -1,7 +1,442 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07bce0e8-d918-4355-856d-f5e104b20570" name="Default Changelist" comment="" />
+    <list default="true" id="07bce0e8-d918-4355-856d-f5e104b20570" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/css/0.styles.f0f36d01.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/icons/about.svg" beforeDir="false" afterPath="$PROJECT_DIR$/html/assets/icons/about.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/icons/faq.svg" beforeDir="false" afterPath="$PROJECT_DIR$/html/assets/icons/faq.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/icons/glass.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/icons/latest_updates.svg" beforeDir="false" afterPath="$PROJECT_DIR$/html/assets/icons/latest_updates.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/icons/old-docs.svg" beforeDir="false" afterPath="$PROJECT_DIR$/html/assets/icons/old-docs.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/icons/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/10.cb5168e7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/100.91245444.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/101.50956ebd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/102.b2da63ea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/103.bd25d345.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/104.5786ca8e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/105.5e39287a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/106.8d651d2a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/107.75e7f02f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/108.4b4e13e4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/109.626f540d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/11.1143f5b3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/110.a8fe416d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/111.21e23417.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/112.5c851007.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/113.688a2649.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/114.bb1c883e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/115.fbb99c9b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/116.5fbb7574.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/117.5a3592b6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/118.1f016acc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/119.b1ad78d6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/12.5ce4d0dc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/120.1175d52e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/121.e9f9e51a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/122.7cfa8b40.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/123.68b633d5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/124.a6c24079.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/125.eff29456.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/126.3e0fe58d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/127.5bcfdb99.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/128.4bd5e808.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/129.bd40de3f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/13.3601fd60.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/130.f8b24103.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/131.2caebd21.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/132.84830623.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/133.0a3c0a95.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/134.bc91736c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/135.4d136b13.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/136.c9bdcefd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/137.a6920a56.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/138.9dd26ac5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/139.8a8ebca7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/14.ad2fa59c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/140.a3968e03.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/141.e9a7bc04.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/142.aaf80b0f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/143.169fc244.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/144.fd640676.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/145.ceb4b7fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/146.87ec9dd5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/147.eb0d28f5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/148.a1ea7d80.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/149.ac85029f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/15.e7e6d0cd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/150.899c41fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/151.209a8a27.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/152.eace8cf3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/153.a4c2438d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/154.62e246d6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/155.cf6e6660.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/156.e0bf3663.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/157.5634112e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/158.0e8dba6b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/159.d9d31235.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/16.c07d52b2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/160.de103493.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/161.2fe8c343.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/162.a840b200.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/163.7f79a6c5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/164.661f6d73.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/165.f9e8ccb1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/166.28023c3c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/167.7dc5a3a0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/168.2a536366.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/169.10d83803.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/17.599cf336.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/170.13e4e4e4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/171.ddae2c28.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/172.099bba07.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/173.1ec55508.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/174.5b6c50ce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/175.0c6c9308.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/176.febb20b1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/177.423b3dd2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/178.6904e11d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/179.0b9565ec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/18.b44d5fb6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/180.75e386c6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/181.22084bd2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/182.74424ae6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/183.5cdfc127.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/184.d0043e36.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/185.847d2087.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/186.22ccb958.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/187.231e88fb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/188.4828ac35.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/189.e90e2c73.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/19.d17a1988.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/190.8b62d300.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/191.ff7032d8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/192.2fb93135.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/193.ce1466ee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/194.62d50550.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/195.ac1fdad6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/196.66436279.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/197.dc7772e6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/198.b57f5f30.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/199.e1b097b4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/2.100f3d5c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/20.d883db0d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/200.258fbfbd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/201.63b59fa4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/202.c7a441cc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/203.fa06243c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/204.5b0cd4e3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/205.16f433db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/206.8f8f3fee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/207.afb6cf55.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/208.8e9bc396.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/209.12c14d1e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/21.9e937ef7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/210.ff802c92.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/211.d54eeebb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/212.96b8de6c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/22.cabaae81.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/23.c773708e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/24.a5307323.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/25.8b84a1d9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/26.cafac1e4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/27.0c4d2457.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/28.2ca15eb1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/29.ecf16ea0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/3.be7d05c1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/30.885d65c7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/31.a252e82a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/32.aaae8cee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/33.d033e3b2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/34.86e5cbdb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/35.e9df46ff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/36.d3e4aeaf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/37.2e64d672.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/38.8a25a19c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/39.b211c14d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/4.54d3d729.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/40.744dbdd4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/41.d6fa7a6c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/42.56d27ce3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/43.207d3549.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/44.978057a3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/45.9ba15601.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/46.1f2b6daa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/47.efc7e757.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/48.04a869e6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/49.02db1190.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/5.583dbc07.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/50.4bb37e20.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/51.cfa1d6ad.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/52.33f7837b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/53.17141a63.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/54.18e64007.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/55.6936a963.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/56.530ef815.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/57.2fd7d745.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/58.8ecec7e5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/59.eca357ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/6.2880860d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/60.88bf946c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/61.0b7bf045.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/62.bc572b45.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/63.74040249.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/64.5f8db842.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/65.e7eff106.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/66.eddd014d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/67.9a62a9db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/68.13156e85.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/69.015bddcc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/7.d33423a2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/70.a1b783f5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/71.647ae212.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/72.b507ff1d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/73.bf8dc324.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/74.1d90f6c2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/75.2f5d9d44.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/76.131f8842.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/77.00062cc9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/78.a8ab0012.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/79.85931fe4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/8.b7ee60fe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/80.83da3600.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/81.5d6f1f1a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/82.33e74559.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/83.9fc8719d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/84.d17b0e4f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/85.28490cd1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/86.01380ef4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/87.e4116bfa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/88.3ed3b6ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/89.93409d9a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/9.26aeb4a6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/90.171e0a5a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/91.d34c990f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/92.1a6aac04.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/93.41d9bbbd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/94.1482e3fb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/95.beb2209e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/96.4c3e2eb2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/97.417ec95b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/98.6fc40beb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/99.6cd9168e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/js/app.b2b75a4f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/media/cards/ui-reference/empathize.svg" beforeDir="false" afterPath="$PROJECT_DIR$/html/assets/media/cards/ui-reference/empathize.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/media/cards/ui-reference/recommendations.svg" beforeDir="false" afterPath="$PROJECT_DIR$/html/assets/media/cards/ui-reference/recommendations.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/assets/media/tagging_func_events.svg" beforeDir="false" afterPath="$PROJECT_DIR$/html/assets/media/tagging_func_events.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/beacon-api.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/beacon-api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/play-api.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/play-api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/search-api.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/search-api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/statistics-api.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/statistics-api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/tagging-api.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/api-reference/tagging-api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui-apps/apps-use-x-components-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui-apps/apps-use-x-components-android.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui-apps/apps-x-archetype-integration-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui-apps/apps-x-archetype-integration-android.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui-apps/apps-x-components-integration-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui-apps/apps-x-components-integration-android.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui-apps/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui-apps/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/web-archetype-integration-guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/web-archetype-integration-guide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/web-use-x-components-guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/web-use-x-components-guide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/web-x-components-integration-guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/web-x-components-integration-guide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/x-architecture/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/build-search-ui/x-architecture/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/capture-interaction-signals/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/capture-interaction-signals/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/capture-interaction-signals/tagging-rest-api-guide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/animations/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/animations/x-components.animate-width.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/animations/x-components.collapse-from-top.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/animations/x-components.collapse-height.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/animations/x-components.collapse-width.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/animations/x-components.fade-and-slide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/animations/x-components.staggered-fade-and-slide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/column-picker/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/column-picker/x-components.base-column-picker-dropdown.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/column-picker/x-components.base-column-picker-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/currency/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/currency/x-components.base-currency.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/filters/labels/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/filters/labels/x-components.base-price-filter-label.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/filters/labels/x-components.base-rating-filter-label.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/icons/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/layouts/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/layouts/x-components.layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/modals/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/modals/x-components.base-events-modal-close.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/modals/x-components.base-events-modal-open.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/modals/x-components.base-events-modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/modals/x-components.base-id-modal-close.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/modals/x-components.base-id-modal-open.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/modals/x-components.base-id-modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/modals/x-components.base-modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/panels/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/panels/x-components.base-header-toggle-panel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/panels/x-components.base-id-toggle-panel-button.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/panels/x-components.base-id-toggle-panel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/panels/x-components.base-toggle-panel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/result/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/result/x-components.base-result-add-to-cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/result/x-components.base-result-current-price.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/result/x-components.base-result-image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/result/x-components.base-result-link.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/result/x-components.base-result-previous-price.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/scroll/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/scroll/x-components.base-id-scroll.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/scroll/x-components.base-main-scroll.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/scroll/x-components.base-scroll-to-top.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/scroll/x-components.base-scroll.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/suggestions/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/suggestions/x-components.base-suggestion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/common/suggestions/x-components.base-suggestions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/device/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/device/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/device/x-components.device-detector.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/device/x-components.device-detector.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/empathize/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/empathize/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/empathize/x-components.empathize.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/empathize/x-components.empathize.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/extra-params/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/extra-params/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/extra-params/x-components.extra-params.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/extra-params/x-components.extra-params.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/extra-params/x-components.renderless-extra-param.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/extra-params/x-components.renderless-extra-param.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/extra-params/x-components.snippet-config-extra-params.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/extra-params/x-components.snippet-config-extra-params.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.clear-filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.clear-filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.facets/facets-provider.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.facets/facets-provider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.facets/facets.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.facets/facets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.facets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.facets/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/all-filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/all-filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/base-filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/base-filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/editable-number-range-filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/editable-number-range-filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/hierarchical-filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/hierarchical-filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/number-range-filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/number-range-filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/renderless-filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/renderless-filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/simple-filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.filters/simple-filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/exclude-filters-with-no-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/exclude-filters-with-no-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/filters-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/filters-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/filters-search.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/filters-search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/selected-filters-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/selected-filters-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/selected-filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/selected-filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/sliced-filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/sliced-filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/sorted-filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/facets/x-components.lists/sorted-filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/x-components.clear-history-queries.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/x-components.clear-history-queries.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/x-components.history-queries.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/x-components.history-queries.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/x-components.history-query.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/x-components.history-query.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/x-components.remove-history-query.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/history-queries/x-components.remove-history-query.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/identifier-results/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/identifier-results/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/identifier-results/x-components.identifier-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/identifier-results/x-components.identifier-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/identifier-results/x-components.identifier-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/identifier-results/x-components.identifier-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/next-queries/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/next-queries/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/next-queries/x-components.next-queries.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/next-queries/x-components.next-queries.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/next-queries/x-components.next-query.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/next-queries/x-components.next-query.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/no-suggestions/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/no-suggestions/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/no-suggestions/x-components.no-suggestions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/popular-searches/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/popular-searches/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/popular-searches/x-components.popular-search.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/popular-searches/x-components.popular-search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/popular-searches/x-components.popular-searches.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/popular-searches/x-components.popular-searches.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/query-suggestions/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/query-suggestions/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/query-suggestions/x-components.query-suggestion.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/query-suggestions/x-components.query-suggestion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/query-suggestions/x-components.query-suggestions.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/query-suggestions/x-components.query-suggestions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/recommendations/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/recommendations/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/recommendations/x-components.recommendations.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/recommendations/x-components.recommendations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/related-tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/related-tags/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/related-tags/x-components.related-tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/related-tags/x-components.related-tag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/related-tags/x-components.related-tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/related-tags/x-components.related-tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search-box/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search-box/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search-box/x-components.clear-search-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search-box/x-components.clear-search-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search-box/x-components.search-button.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search-box/x-components.search-button.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search-box/x-components.search-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search-box/x-components.search-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.banners-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.banners-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.partial-query-button.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.partial-query-button.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.partial-results-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.partial-results-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.promoted.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.promoted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.promoteds-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.promoteds-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.results-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.results-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.search-items-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.sort-dropdown.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.sort-dropdown.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.sort-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.sort-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.spellcheck-button.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.spellcheck-button.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.spellcheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/components/search/x-components.spellcheck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/develop-empathy-platform/ui-reference/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/capture-shopper-interaction/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/capture-shopper-interaction/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/capture-shopper-interaction/interaction-events.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/capture-shopper-interaction/interaction-events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/facets.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/facets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/history-queries.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/history-queries.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/next-queries.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/next-queries.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/popular-searches.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/popular-searches.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/query-suggestions.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/query-suggestions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/recommendations.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/recommendations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/related-tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/related-tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/results.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/search-box.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/interface/search-box.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/contextualize-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/contextualize-service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/index-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/index-service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/play-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/play-service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/search-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/search-service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/stats-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/stats-service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/tagging-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/microservices/tagging-service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-analytics.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-analytics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-explainability.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-explainability.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-insights.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-insights.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-tooling.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/diagram/play/play-tooling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/empathize.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/empathize.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/facets-and-filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/facets-and-filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/history-queries.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/history-queries.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/id-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/id-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/next-queries.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/next-queries.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/popular-searches.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/popular-searches.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/product-results-ui.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/product-results-ui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/query-suggestions.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/query-suggestions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/recommendations.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/recommendations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/related-tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/related-tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/search-box.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/search-box.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/serp-ui.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/experience-search-&amp;-discovery/serp-ui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/explore-empathy-platform/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-basics/facets-and-filters-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-basics/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-basics/pagination-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-basics/predictive-layer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-basics/product-results-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-basics/product-scoring.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-basics/results-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-basics/search-box-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-basics/sorting-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/attribute-ranking-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/blacklist-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/equalize-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/history-queries-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/id-results-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/next-queries-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/partial-results-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/popular-searches-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/product-ranking-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/promotions-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/query-suggestions-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/recommendations-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/redirections-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/related-tags-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/spellcheck-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/explore-empathy-platform/search-features/synonyms-overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/faqs.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/faqs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/latest-updates.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/latest-updates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/open-api/data/tagging.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/html/open-api/data/tagging.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/open-api/ether/openapi.yml" beforeDir="false" afterPath="$PROJECT_DIR$/html/open-api/ether/openapi.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/open-api/play/instancesAdmin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/html/open-api/play/instancesAdmin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/privacy-policy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/privacy-policy/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/weekly-updates.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/weekly-updates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/whats-edocs.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/whats-edocs.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +449,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1t9q2cxzgEBL7pUct1Sxdi7Sg6U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -55,7 +501,31 @@
       <workItem from="1636619000286" duration="1054000" />
       <workItem from="1636701406780" duration="546000" />
       <workItem from="1637175942253" duration="3222000" />
-      <workItem from="1637224176411" duration="481000" />
+      <workItem from="1637224176411" duration="879000" />
+      <workItem from="1637306313904" duration="593000" />
+      <workItem from="1637568949615" duration="3003000" />
+      <workItem from="1638187307736" duration="456000" />
+      <workItem from="1638261754481" duration="2958000" />
+      <workItem from="1639499404761" duration="784000" />
+      <workItem from="1639567957799" duration="884000" />
+      <workItem from="1639731439813" duration="1144000" />
+      <workItem from="1639742623939" duration="889000" />
+      <workItem from="1639762120286" duration="599000" />
+      <workItem from="1639988516732" duration="5000" />
+      <workItem from="1640099904502" duration="1129000" />
+      <workItem from="1640799413305" duration="66000" />
+      <workItem from="1640895240970" duration="341000" />
+      <workItem from="1643724502913" duration="1787000" />
+      <workItem from="1643790213367" duration="3000" />
+      <workItem from="1643888550809" duration="688000" />
+      <workItem from="1644421005457" duration="1541000" />
+      <workItem from="1645460630080" duration="1787000" />
+      <workItem from="1648047349753" duration="879000" />
+      <workItem from="1648202155511" duration="4229000" />
+      <workItem from="1648452051717" duration="55000" />
+      <workItem from="1648564240670" duration="1933000" />
+      <workItem from="1648735403396" duration="1468000" />
+      <workItem from="1648793340029" duration="13000" />
     </task>
     <servers />
   </component>

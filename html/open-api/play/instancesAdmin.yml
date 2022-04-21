@@ -326,7 +326,7 @@ paths:
   /admin/instances/{id}/{domain}/permissions:
     get:
       tags:
-        - Instaces admin permissions
+        - Instances admin permissions
       summary: Retrieve all permissions of the instances admin configurations id passed in by parameter.
       operationId: getPermissions
       parameters:
@@ -376,7 +376,7 @@ paths:
                 $ref: '#/components/schemas/InternalServerError'
     put:
       tags:
-        - Instaces admin permissions
+        - Instances admin permissions
       summary: Update permissions for the instance admin configuration id passed by parameter.
       operationId: putPermissions
       requestBody:
@@ -438,7 +438,7 @@ paths:
   /admin/instances/{id}/{domain}/tools:
     get:
       tags:
-        - Instaces admin tools
+        - Instances admin tools
       summary: Retrieve tools for the instance admin passed by parameter.
       operationId: getTools
       parameters:
@@ -488,7 +488,7 @@ paths:
                 $ref: '#/components/schemas/InternalServerError'
     put:
       tags:
-        - Instaces admin tools
+        - Instances admin tools
       summary: Update tools for the instance admin configuration id passed by parameter.
       operationId: putTools
       requestBody:
@@ -546,7 +546,275 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/InternalServerError'
-
+  /admin/instances/{id}/catalog:
+    get:
+      tags:
+        - Instances admin catalog configuration
+      summary: Retrieve catalog configuration for the instance admin passed by parameter.
+      operationId: getCatalog
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the instance admin configuration.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CatalogConfig'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+    put:
+      tags:
+        - Instances admin catalog configuration
+      summary: Update catalog for the instance admin configuration id passed by parameter.
+      operationId: putCatalog
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CatalogConfig'
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the instance admin configuration.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CatalogConfig'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+  /admin/instances/{id}/endpoints:
+    get:
+      tags:
+        - Instances admin endpoints configuration
+      summary: Retrieve endpoints configuration for the instance admin passed by parameter.
+      operationId: getEndpoints
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the instance admin configuration.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InstanceAdminEndpoints'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+    put:
+      tags:
+        - Instances admin endpoints configuration
+      summary: Update endpoints configuration for the instance admin configuration id passed by parameter.
+      operationId: putEndpoints
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InstanceAdminEndpoints'
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the instance admin configuration.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InstanceAdminEndpoints'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+  /admin/instances/{id}/kpis:
+    get:
+      tags:
+        - Instances admin kpis configuration
+      summary: Get kpis configuration for the instance admin configuration id passed by parameter.
+      operationId: getKpis
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Kpis'
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the instance admin configuration.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Kpis'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+    put:
+      tags:
+        - Instances admin kpis configuration
+      summary: Update kpis configuration for the instance admin configuration id passed by parameter.
+      operationId: putKpis
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Kpis'
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the instance admin configuration.
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Kpis'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forbidden'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
 components:
   schemas:
     InstanceAdmin:
@@ -669,6 +937,67 @@ components:
           $ref: '#/components/schemas/ConfigurationsToolConfig'
         synonym:
           $ref: '#/components/schemas/SynonymsToolConfig'
+    CatalogConfig:
+      title: CatalogConfig
+      description: Configuration of the catalog.
+      type: object
+      required:
+        - result_mappings
+      properties:
+        index_token:
+          description: Id of the instance that is used to identify the customer in the index service.
+          type: string
+        fields:
+          description: Catalog fields configuration.
+          type: array
+          items:
+            $ref: '#/components/schemas/CatalogField'
+        result_mappings:
+          $ref: '#/components/schemas/ResultMappings'
+    ResultMappings:
+      title: ResultMappings
+      type: object
+      description: Object that is used to map playboard known fields with the customer specific search homologous fields.
+      properties:
+        id:
+          description: Name of the Field containing the product id.
+          type: string
+        image_url:
+          description: Name of the field that contains the URL of an image.
+          type: string
+        image_url_prefix:
+          description: Fixed image url prefix. This is used when each product has a relative url for images. It is not needed if the product uses absolute urls for images.
+          type: string
+        name:
+          description: Name of the field that contains the product name.
+          type: string
+        url:
+          description: Name of the field that contains the URL of the product.
+          type: string
+        url_prefix:
+          description: Fixed url prefix. This is used when each product has a relative url. It is not needed if the product uses absolute urls.
+          type: string
+    CatalogField:
+      title: CatalogField
+      description: Definition of the catalog field behavior.
+      type: object
+      properties:
+        id:
+          description: Field identifier.
+          type: string
+        pretty_name:
+          description: Pretty name of the field used to be displayed.
+          type: string
+        facetable:
+          description: Identify the field as facetable.
+          type: boolean
+        rankable:
+          description: Identify the field as rankable.
+          type: boolean
+        searchable:
+          description: Identify the field as searchable.
+          type: boolean
+
     SynonymsToolConfig:
       title: SynonymsToolConfig
       description: Configuration for the synonyms tool
@@ -734,6 +1063,168 @@ components:
           description: Pretty name for the synonyme type.
           type: string
 
+    InstanceAdminEndpoints:
+      title: Endpoints
+      description: EndpointsConfiguration.
+      type: object
+      properties:
+        search:
+          $ref: '#/components/schemas/EndpointConfig'
+        stats:
+          $ref: '#/components/schemas/EndpointConfig'
+        browse:
+          $ref: '#/components/schemas/BrowseEndpointConfig'
+    Kpis:
+      title: Kpis
+      description: KpisConfiguration.
+      type: array
+      items:
+        type: string
+        example: "clicks"
+    EndpointConfig:
+      description: Config for an endpoint.
+      type: array
+      items:
+        oneOf:
+          - $ref: '#/components/schemas/EnumFilter'
+          - $ref: '#/components/schemas/DateFilter'
+          - $ref: '#/components/schemas/TextFilter'
+    BrowseEndpointConfig:
+      description: List of available filters.
+      type: object
+      properties:
+        attributes:
+          items:
+            $ref: '#/components/schemas/Attribute'
+        filters:
+          description: List of available filters.
+          type: array
+          items:
+            $ref: '#/components/schemas/EndpointConfig'
+    Attribute:
+      title: attribute
+      description: Configuration for an attribute.
+      type: object
+      properties:
+        attributes:
+          type: array
+          description: List that can be used to identify groups of products.
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                description: Product identifier.
+              browse_id:
+                type: string
+                description: Browse identifier.
+              facet_id:
+                type: string
+                description: Facet identifier.
+              pretty_name:
+                type: string
+                description: Name of the product to be displayed
+    EnumFilter:
+      title: Enum filter
+      required:
+        - id
+        - type
+        - values
+        - values_sort_type
+      type: object
+      properties:
+        id:
+          description: Id of the filter
+          type: string
+        type:
+          description: Type of filter. In this case it will be always 'ENUM'.
+          type: string
+          enum:
+            - ENUM
+        values_sort_type:
+          description: Stores the type of the configuration.
+          type: string
+          enum:
+            - BY_DEFAULT
+            - ALPHABETICALLY
+        values:
+          description: list of enum filter values
+          type: array
+          items:
+            $ref: '#/components/schemas/EnumFilterValue'
+        mandatory:
+          description: If is required.
+          type: boolean
+        i18n_key:
+          description: Name of the filter to be displayed.
+          type: string
+        pretty_name:
+          description: Name of the filter to be displayed.
+          type: string
+    EnumFilterValue:
+      description: Enum filter value
+      type: object
+      properties:
+        id:
+          description: Id of the value
+          type: string
+    TextFilter:
+      title: Text filter
+      required:
+        - id
+        - type
+      type: object
+      properties:
+        id:
+          description: Id of the filter
+          type: string
+        type:
+          description: Type of filter. In this case it will be always 'realtime'.
+          type: string
+          enum:
+            - TEXT
+        mandatory:
+          description: If is required.
+          type: boolean
+        i18n_key:
+          description: Name of the filter to be displayed.
+          type: string
+        pretty_name:
+          description: Name of the filter to be displayed.
+          type: string
+    DateFilter:
+      title: Date filter
+      required:
+        - id
+        - type
+      type: object
+      properties:
+        id:
+          description: Id of the filter.
+          type: string
+        max_date_in_millis:
+          description: Maximum date that can be requested in milliseconds.
+          type: integer
+        max_period_in_millis:
+          description: Maximum period of time that can be requested in milliseconds.
+          type: integer
+        min_date_in_millis:
+          description: Minimum date that can be requested in milliseconds.
+          type: integer
+        type:
+          description: Type of filter. In this case it will be always 'DATE'.
+          type: string
+          enum:
+            - DATE
+        mandatory:
+          description: If is required.
+          type: boolean
+        i18n_key:
+          description: Name of the filter to be displayed.
+          type: string
+        pretty_name:
+          description: Name of the filter to be displayed.
+          type: string
     BadRequest:
       title: Bad Request
       type: object
@@ -818,7 +1309,6 @@ components:
               type: string
             message:
               type: string
-
 
   securitySchemes:
     BearerAuth:

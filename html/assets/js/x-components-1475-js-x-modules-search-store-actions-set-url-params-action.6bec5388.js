@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[206],{415:function(t,e,r){"use strict";r.r(e),r.d(e,"setUrlParams",(function(){return n}));var n=function(t,e){var r=t.commit,n=e.query,s=e.page,o=e.sort;r("setQuery",n),r("setPage",s),r("setSort",o)}}}]);

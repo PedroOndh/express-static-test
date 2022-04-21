@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[201],{409:function(e,s,r){"use strict";r.r(s),r.d(s,"fetchSearchResponse",(function(){return t}));var n=r(37),t=function(e,s){return s?n.XPlugin.adapter.search(s):{banners:[],facets:[],partialResults:[],promoteds:[],queryTagging:{params:{},url:""},redirections:[],results:[],spellcheck:"",totalResults:0}}}}]);

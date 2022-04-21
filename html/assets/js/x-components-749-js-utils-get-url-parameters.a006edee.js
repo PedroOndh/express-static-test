@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[448],{108:function(e,n,o){"use strict";o.r(n),o.d(n,"getURLParameter",(function(){return r}));var r=function(e){var n=new RegExp("[?|&]"+e+"=([^&;]+?)(&|#|;|$)").exec(window.location.href);return n?decodeURIComponent(n[1].replace(/\+/g,"%20")):null}}}]);

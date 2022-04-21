@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[468],{470:function(n,t,e){"use strict";e.r(t),e.d(t,"empathizeXStoreModule",(function(){return i}));var i={state:function(){return{config:{},isOpen:!1}},getters:{},mutations:{setIsOpen:function(n,t){n.isOpen=t}},actions:{}}}}]);

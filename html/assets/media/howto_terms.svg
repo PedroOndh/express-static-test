@@ -1,0 +1,77 @@
+<svg width="766" height="466" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#FFF" d="M0 0h766v466H0z"/><path fill="#CFD4D7" d="M20 20h725v425H20z"/><g transform="translate(331.378 449.028)" opacity=".627"><rect fill="#E2E6E7" width="119.131" height="139.44" rx="5"/><rect fill="#FFF" x="11.498" y="9.586" width="96.135" height="75.433" rx="4.266"/><rect width="61.59" height="9.507" rx="4.266" transform="translate(27.11 93.96)" fill="#BBC3C6"/><rect width="96.03" height="17.842" rx="8.921" transform="translate(9.89 112.013)" fill="#BBC3C6"/></g><g transform="translate(198.235 449.028)" opacity=".627"><rect fill="#E2E6E7" width="119.131" height="139.44" rx="5"/><rect fill="#FFF" x="11.498" y="9.586" width="96.135" height="75.433" rx="4.266"/><rect width="61.59" height="9.507" rx="4.266" transform="translate(27.11 93.96)" fill="#BBC3C6"/><rect width="96.03" height="17.842" rx="8.921" transform="translate(9.89 112.013)" fill="#BBC3C6"/></g><g transform="translate(464.52 449.028)" opacity=".627"><rect fill="#E2E6E7" width="119.131" height="139.44" rx="5"/><rect fill="#FFF" x="11.498" y="9.586" width="96.135" height="75.433" rx="4.266"/><rect width="61.59" height="9.507" rx="4.266" transform="translate(27.11 93.96)" fill="#BBC3C6"/><rect width="96.03" height="17.842" rx="8.921" transform="translate(9.89 112.013)" fill="#BBC3C6"/></g><rect stroke="#202020" stroke-width="21.443" x="9.807" y="9.779" width="745.443" height="445.443" rx="7.213"/><g transform="translate(597.662 449.028)" opacity=".627"><rect fill="#E2E6E7" width="119.131" height="139.44" rx="5"/><rect fill="#FFF" x="11.498" y="9.586" width="96.135" height="75.433" rx="4.266"/><rect width="61.59" height="9.507" rx="4.266" transform="translate(27.11 93.96)" fill="#BBC3C6"/><rect width="96.03" height="17.842" rx="8.921" transform="translate(9.89 112.013)" fill="#BBC3C6"/></g><text font-family="Montserrat-Regular, Montserrat" font-size="26" fill="#1E3D49">
+            <tspan x="337.032" y="69">TERMS</tspan>
+        </text><g fill="#243C47"><path d="M85.633 89.848H79.1l3.266 3.266"/><path d="M71 86.64V73a4 4 0 0 1 4-4h13.64a4 4 0 0 1 4 4v13.64a4 4 0 0 1-4 4H75a4 4 0 0 1-4-4Z"/></g><text font-family="Montserrat-Regular, Montserrat" font-size="13" fill="#FFF" transform="translate(71 69)">
+                <tspan x="6.382" y="15.24">A</tspan>
+            </text><g fill="#8B6391"><path d="M564.633 89.848H558.1l3.266 3.266"/><path d="M550 86.64V73a4 4 0 0 1 4-4h13.64a4 4 0 0 1 4 4v13.64a4 4 0 0 1-4 4H554a4 4 0 0 1-4-4Z"/></g><text font-family="Montserrat-Regular, Montserrat" font-size="13" fill="#FFF" transform="translate(550 69)">
+                <tspan x="6.382" y="15.24">C</tspan>
+            </text><g fill="#53B9C9"><path d="M85.633 213.848H79.1l3.266 3.266"/><path d="M71 210.64V197a4 4 0 0 1 4-4h13.64a4 4 0 0 1 4 4v13.64a4 4 0 0 1-4 4H75a4 4 0 0 1-4-4Z"/></g><text font-family="Montserrat-Regular, Montserrat" font-size="13" fill="#FFF" transform="translate(71 193)">
+                <tspan x="6.382" y="15.24">B</tspan>
+            </text><path d="M516.444 445V111c0-7.18 5.82-13 13-13h188c7.18 0 13 5.82 13 13v334" stroke="#8B6391"/><path d="M524.444 445V119.663c0-6.994 5.386-12.663 12.028-12.663h173.944c6.643 0 12.028 5.67 12.028 12.663V445" fill="#FFF"/><text font-family="Montserrat-Regular, Montserrat" font-size="18" fill="#1E3D49" transform="translate(539.5 123)">
+                <tspan x="0" y="17">TOP QUERIES</tspan>
+            </text><path fill="#FDCB5B" d="M613 200.5v10h-71v-10z"/><path fill="#E2E6E7" d="M652 200.5v10h-47v-10z"/><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#243C47" transform="translate(542 200.5)">
+                    <tspan x="149.912" y="8">257</tspan>
+                </text><path fill="#FDCB5B" d="M581 302.5v10h-39v-10z"/><path fill="#E2E6E7" d="M652 302.5v10h-71v-10z"/><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#243C47" transform="translate(542 302.5)">
+                            <tspan x="151.016" y="8">178</tspan>
+                        </text><rect width="34" height="9" rx="4.5" fill="#BBC3C6" transform="translate(541.074 287.5)"/><path fill="#FDCB5B" d="M565 339.5v10h-23v-10z"/><path fill="#E2E6E7" d="M652 339.5v10h-87v-10z"/><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#243C47" transform="translate(542 339.5)">
+                            <tspan x="150.136" y="8">104</tspan>
+                        </text><rect width="34" height="9" rx="4.5" fill="#BBC3C6" transform="translate(541.074 324.5)"/><path fill="#FDCB5B" d="M560 376.5v10h-18v-10z"/><path fill="#E2E6E7" d="M652 376.5v10h-92v-10z"/><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#243C47" transform="translate(542 376.5)">
+                            <tspan x="154.128" y="8">82</tspan>
+                        </text><g fill="#BBC3C6" transform="translate(541.074 361.5)"><rect width="34" height="9" rx="4.5"/></g><g><path fill="#FDCB5B" d="M548 413.5v10h-6v-10z"/><path fill="#E2E6E7" d="M652 413.5v10H548v-10z"/><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#243C47" transform="translate(542 413.5)">
+                            <tspan x="153.184" y="8">40</tspan>
+                        </text><g fill="#BBC3C6" transform="translate(541.074 398.5)"><rect width="34" height="9" rx="4.5"/></g></g><path fill="#CFD4D7" d="M706 270v1H542v-1z"/><g fill="#243C47" font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500"><text transform="translate(539.5 223)">
+                    <tspan x="11.524" y="8">40.08%</tspan>
+                </text><text transform="translate(539.5 223)">
+                    <tspan x=".172" y="23">FINDABILITY</tspan>
+                </text></g><g fill="#243C47" font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500"><text transform="translate(600.5 223)">
+                    <tspan x="9.876" y="8">24.12%</tspan>
+                </text><text transform="translate(600.5 223)">
+                    <tspan x=".472" y="23">ADD2CART</tspan>
+                </text></g><g fill="#243C47" font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500"><text transform="translate(655.5 223)">
+                    <tspan x="20.236" y="8">0%</tspan>
+                </text><text transform="translate(655.5 223)">
+                    <tspan x=".48" y="23">NO RESULTS</tspan>
+                </text></g><text font-family="Montserrat-SemiBold, Montserrat" font-size="12" font-weight="500" fill="#243C47" transform="translate(539.5 123)">
+                <tspan x="2.5" y="38">SHIRT</tspan>
+            </text><g transform="translate(541.074 185.5)" fill="#BBC3C6"><rect width="34" height="9" rx="4.5"/></g><path d="M44.444 445V235c0-7.18 5.82-13 13-13h437c7.18 0 13 5.82 13 13v210" stroke="#53B9C9"/><path d="M44.444 445V235c0-7.18 5.82-13 13-13h437c7.18 0 13 5.82 13 13v210" stroke="#53B9C9"/><path d="M54.444 445V244.417c0-6.858 5.57-12.417 12.439-12.417h418.123c6.87 0 12.438 5.56 12.438 12.417V445" fill="#FFF"/><g><g transform="translate(95 418)" fill="#CFD4D7"><circle cx="2" cy="2" r="2"/><circle cx="8" cy="2" r="2"/><circle cx="14" cy="2" r="2"/></g><g fill="#CFD4D7"><path d="M120 356.704c35.257 8.064 57.12 12.096 65.589 12.096 11.733 0 55.453 11.232 55.453 11.232s8.783.938 11.366-6.987c8.495-26.063 21.93-67.045 43.83-67.045 30.454 0 44.108 62.8 61.973 62.8H487l-.248 43.2c-30.91-5.184-53.099-7.776-66.567-7.776-28.293 0-46.565 7.776-61.974 7.776-33.506 0-40.396-76.897-61.974-76.897-19.302 0-27.913 73.441-55.195 73.441-11.11 0-51.05-4.32-55.453-4.32H120v-47.52Z" opacity=".498"/><path d="M120 356.613h9.787v47.748H120zM180.677 369.027h9.787v35.333h-9.787zM236.461 379.532h9.787v28.649h-9.787zM291.267 306h9.787v30.559h-9.787zM353.901 369.027h9.787V412h-9.787zM415.557 369.027h9.787v35.333h-9.787zM477.213 369.027H487V412h-9.787z"/></g><g fill="#FDCB5B"><path d="M120 281.182c35.257 8.06 57.12 12.09 65.589 12.09 3.526 0 55.453 26.773 55.453 26.773s28.647 19 55.195 19.864c15.023.489 42.218-17.37 61.974-28.5 24.596-13.857 37.039-24.775 61.974-30.227 12.377-2.707 34.649-4.434 66.815-5.182v90.682H358.211c-33.506 0-40.396 23.318-61.974 23.318-19.302 0-27.913-14.682-55.195-14.682-11.11 0-51.05-12.09-55.453-12.09-10.82 0-32.683-4.031-65.589-12.092v-69.954Z" opacity=".498"/><path d="M120 281.748h9.787v69.933H120zM180.677 293.244h9.787v69.933h-9.787zM236.461 320.067h9.787v55.563h-9.787zM291.267 340.185h9.787V390h-9.787zM353.901 311.445h9.787v55.563h-9.787zM415.557 280.79h9.787v86.218h-9.787zM477.213 276H487v91.008h-9.787z"/></g><path fill="#E7EAEB" d="M120 415h367v9H120z"/><path fill="#CFD4D7" d="M120 415h9.787v9H120zM180.677 415h9.787v9h-9.787zM236.461 415h9.787v9h-9.787zM291.267 415h9.787v9h-9.787zM353.901 415h9.787v9h-9.787zM415.557 415h9.787v9h-9.787zM477.213 415H487v9h-9.787z"/><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#243C47" transform="translate(52.382 276)">
+                    <tspan x="34.352" y="37.24">SHIRT</tspan>
+                </text><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#BBC3C6" transform="translate(52.382 276)">
+                    <tspan x="31.12" y="106.24">DRESS</tspan>
+                </text><text font-family="Montserrat-Regular, Montserrat" font-size="6" fill="#243C47" transform="translate(52.382 276)">
+                    <tspan x="13.46" y="46.24">15.170 QUERIES</tspan>
+                </text><text font-family="Montserrat-SemiBold, Montserrat" font-size="6" font-weight="500" fill="#243C47" transform="translate(52.382 276)">
+                    <tspan x="68.338" y="157.24">09 THU</tspan>
+                </text><text font-family="Montserrat-SemiBold, Montserrat" font-size="6" font-weight="500" fill="#243C47" transform="translate(52.382 276)">
+                    <tspan x="122.898" y="157.24">10 FRI</tspan>
+                </text><text font-family="Montserrat-SemiBold, Montserrat" font-size="6" font-weight="500" fill="#243C47" transform="translate(52.382 276)">
+                    <tspan x="180.102" y="157.24">11 SAT</tspan>
+                </text><text font-family="Montserrat-SemiBold, Montserrat" font-size="6" font-weight="500" fill="#243C47" transform="translate(52.382 276)">
+                    <tspan x="233.198" y="157.24">12 SUN</tspan>
+                </text><text font-family="Montserrat-SemiBold, Montserrat" font-size="6" font-weight="500" fill="#243C47" transform="translate(52.382 276)">
+                    <tspan x="294.924" y="157.24">13 MON</tspan>
+                </text><text font-family="Montserrat-SemiBold, Montserrat" font-size="6" font-weight="500" fill="#243C47" transform="translate(52.382 276)">
+                    <tspan x="356.696" y="157.24">14 TUE</tspan>
+                </text><text font-family="Montserrat-SemiBold, Montserrat" font-size="6" font-weight="500" fill="#243C47" transform="translate(52.382 276)">
+                    <tspan x="411.804" y="157.24">15 WED</tspan>
+                </text><text font-family="Montserrat-Regular, Montserrat" font-size="18" fill="#1E3D49" transform="translate(52.382 243)">
+                <tspan x="14.118" y="17">TOP TERMS BY GROWTH</tspan>
+            </text><g><g transform="translate(344.074 246.5)"><rect stroke="#243C47" fill="#FFF" x="60.79" y=".5" width="82" height="15" rx="7.5"/><rect fill="#243C47" width="74" height="16" rx="8"/></g><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#FFF" transform="translate(344.074 246.5)">
+                    <tspan x="17.356" y="10.74">GROWTH</tspan>
+                </text><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#243C47" transform="translate(344.074 246.5)">
+                    <tspan x="80.476" y="10.74">POPULARITY</tspan>
+                </text></g></g><g><g fill="#80C0A1"><path d="M325.61 250.244v6.533l3.266-3.266"/><path d="M322.402 264.877h-13.64a4 4 0 0 1-4-4v-13.64a4 4 0 0 1 4-4h13.64a4 4 0 0 1 4 4v13.64a4 4 0 0 1-4 4Z"/></g><text transform="translate(302.946 242.58)" font-family="Montserrat-Regular, Montserrat" font-size="13" fill="#FFF">
+                <tspan x="8.382" y="15.24">E</tspan>
+            </text></g><rect stroke="#243C47" x="44.5" y="98.5" width="462" height="86" rx="16"/><rect stroke="#80C0A1" x="332.5" y="232.5" width="165" height="43" rx="11"/><rect fill="#FFF" x="54" y="107" width="443" height="68" rx="10"/><g><g fill="#FDCB5B"><path d="M227.029 165.87v-6.533l-3.266 3.266"/><path d="M230.237 151.237h13.64a4 4 0 0 1 4 4v13.64a4 4 0 0 1-4 4h-13.64a4 4 0 0 1-4-4v-13.64a4 4 0 0 1 4-4Z"/></g><text transform="translate(225.58 149.054)" font-family="Montserrat-Regular, Montserrat" font-size="13" fill="#FFF">
+                <tspan x="6.382" y="17.24">D</tspan>
+            </text></g><rect stroke="#FDCB5B" x="54.5" y="149.5" width="165" height="25" rx="8"/><g><path fill="#BBC3C6" d="m255.052 127.884-2.052-3h4.105z"/><path stroke="#BBC3C6" stroke-linecap="square" d="M172.5 132.5h84"/><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#BBC3C6" transform="translate(172 120.24)">
+                <tspan x=".534" y="8">Store</tspan>
+            </text></g><g><path fill="#BBC3C6" d="m358.158 127.884-2.052-3h4.105z"/><path stroke="#BBC3C6" stroke-linecap="square" d="M275.605 132.5h84"/><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#BBC3C6" transform="translate(275.105 120.24)">
+                <tspan x=".382" y="8">Section</tspan>
+            </text></g><g><path fill="#BBC3C6" d="m461.263 127.884-2.052-3h4.105z"/><path stroke="#BBC3C6" stroke-linecap="square" d="M378.71 132.5h84"/><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" fill="#BBC3C6" transform="translate(378.21 120.24)">
+                <tspan x=".382" y="8">Device</tspan>
+            </text></g><g><text font-family="Montserrat-SemiBold, Montserrat" font-size="6" font-weight="500" fill="#243C47" transform="translate(65.72 117.5)">
+                    <tspan x=".281" y="25.5">DEC 09, 21 - DEC 15 WED, 21  </tspan>
+                </text><g transform="translate(65.72 117.5)"><rect fill="#243C47" width="87" height="16" rx="3"/><g fill="#FFF"><text font-family="Montserrat-SemiBold, Montserrat" font-size="8" font-weight="500" transform="translate(25.663 2.74)">
+                            <tspan x=".208" y="8">WEEK</tspan>
+                        </text><path d="m58.334 10.384-2.053-3h4.105z"/></g></g><g><text font-family="Montserrat-SemiBold, Montserrat" font-size="6" font-weight="500" fill="#BBC3C6" transform="translate(66 154)">
+                    <tspan x="0" y="6">SEARCH</tspan>
+                </text><path d="M203.667 160.333a2.667 2.667 0 1 0 0-5.333 2.667 2.667 0 0 0 0 5.333ZM207 161l-1.45-1.45" stroke="#BBC3C6" stroke-width=".825" stroke-linecap="round" stroke-linejoin="round"/><path stroke="#BBC3C6" stroke-linecap="square" d="M66.5 165.5h141"/></g></g><path fill="#BBC3C6" d="m255.052 127.885-2.052-3h4.105z"/></g></svg>

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[109],{460:function(e,r,n){"use strict";n.r(r),n.d(r,"popularSearches",(function(){return u}));var u=function(e){var r=e.popularSearches,n=e.searchedQueries,u=e.config,i=n.map((function(e){return e.query}));return u.hideSessionQueries?r.filter((function(e){var r=e.query;return!i.includes(r)})):r}}}]);

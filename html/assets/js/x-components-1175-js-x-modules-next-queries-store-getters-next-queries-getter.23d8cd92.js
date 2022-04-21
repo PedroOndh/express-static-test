@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[96],{444:function(e,n,r){"use strict";r.r(n),r.d(n,"nextQueries",(function(){return u}));var u=function(e){var n=e.nextQueries,r=e.searchedQueries,u=e.config,i=r.map((function(e){return e.query}));return u.hideSessionQueries?n.filter((function(e){var n=e.query;return!i.includes(n)})):n}}}]);

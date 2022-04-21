@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[73],{453:function(n,t,e){"use strict";e.r(t),e.d(t,"fetchIdentifierResults",(function(){return u}));var r=e(37),u=function(n,t){return t?r.XPlugin.adapter.searchById(t).then((function(n){return n.results})):[]}}}]);

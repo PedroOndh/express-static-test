@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[54],{510:function(r,e,t){"use strict";t.r(e),t.d(e,"removeFromHistory",(function(){return n}));var n=function(r,e){var t=r.state;return(0,r.dispatch)("setHistoryQueries",t.historyQueries.filter((function(r){return r.query!==e.query})))}}}]);
