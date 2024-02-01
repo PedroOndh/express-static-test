@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[463],{507:function(e,i,n){"use strict";n.r(i),n.d(i,"deviceWiring",(function(){return a})),n.d(i,"setName",(function(){return r}));var t=n(35),c=n(50),r=Object(c.namespacedWireCommit)("device")("setName"),a=Object(t.createWiring)({DeviceProvided:{setName:r}})}}]);

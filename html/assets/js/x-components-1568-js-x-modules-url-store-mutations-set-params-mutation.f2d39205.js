@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[233],{532:function(n,t,c){"use strict";c.r(t),c.d(t,"setParams",(function(){return s}));var o=c(3),e=c(13),s=function(n,t){Object(e.forEach)(t,(function(t,c){o.default.set(n,t,c)}))}}}]);

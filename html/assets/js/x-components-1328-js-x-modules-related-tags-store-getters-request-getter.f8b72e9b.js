@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[152],{466:function(e,t,r){"use strict";r.r(t),r.d(t,"request",(function(){return n}));var s=r(1),n=function(e){var t=e.query,r=e.selectedRelatedTags,n=e.config,a=e.params;return t.trim()?Object(s.__assign)({query:t,relatedTags:r,rows:n.maxItemsToRequest,start:0},a):null}}}]);

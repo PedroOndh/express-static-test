@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[77],{456:function(e,n,i){"use strict";i.r(n),i.d(n,"identifierDetectionRegexp",(function(){return t}));var t=function(e){var n=e.config;return new RegExp(n.identifierDetectionRegexp)}}}]);

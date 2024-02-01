@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[107],{459:function(n,e,t){"use strict";t.r(e),t.d(e,"fetchSuggestions",(function(){return s}));var u=t(37),s=function(n,e){return u.XPlugin.adapter.getSuggestions(e,{requestId:"popularSearches"}).then((function(n){return n.suggestions}))}}}]);

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[462],{469:function(n,t,e){"use strict";e.r(t),e.d(t,"deviceXStoreModule",(function(){return o}));var o={state:function(){return{name:null}},getters:{},mutations:{setName:function(n,t){n.name=t}},actions:{}}}}]);
